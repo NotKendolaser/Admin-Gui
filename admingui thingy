@@ -1,0 +1,1159 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local AdminPanel = Instance.new("ScreenGui")
+local GuiFrame = Instance.new("Frame")
+local Deletetool = Instance.new("TextButton")
+local DestoryGui = Instance.new("TextButton")
+local Others = Instance.new("TextLabel")
+local Settings = Instance.new("TextLabel")
+local EnableBackpack = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local InfiniteYield = Instance.new("TextButton")
+local Spam = Instance.new("TextLabel")
+local Spam_2 = Instance.new("TextLabel")
+local seconds = Instance.new("TextLabel")
+local startthemachine = Instance.new("TextButton")
+local CommandTarget = Instance.new("TextBox")
+local Delay = Instance.new("TextBox")
+local Exploits = Instance.new("TextLabel")
+local BatKnightFF = Instance.new("TextButton")
+local PlayerJoinsLeaves = Instance.new("TextButton")
+local GearsGuiMob = Instance.new("TextButton")
+local GearsGuiPC = Instance.new("TextButton")
+local PermanentBat = Instance.new("TextButton")
+local BatTextLabel = Instance.new("TextLabel")
+local VampireVanquisherText = Instance.new("TextLabel")
+local vampireinfinitestun = Instance.new("TextButton")
+local vampirecrash = Instance.new("TextButton")
+local Warning = Instance.new("Frame")
+local WarningText = Instance.new("TextLabel")
+local YES = Instance.new("TextButton")
+local NOO = Instance.new("TextButton")
+local NoteText = Instance.new("TextLabel")
+local finishercamera = Instance.new("TextButton")
+local SpamOrbs = Instance.new("TextButton")
+local CrystalOrbLauncherLabel = Instance.new("TextLabel")
+local SkullCracker = Instance.new("TextLabel")
+local SkullCrackernobackpack = Instance.new("TextButton")
+local FrostBlade = Instance.new("TextLabel")
+local IceDisableBackpack = Instance.new("TextButton")
+local NoRoot = Instance.new("TextButton")
+local BreakJointsLeftArm = Instance.new("TextButton")
+local BreakerDisableBackpack = Instance.new("TextButton")
+local IceBreak = Instance.new("TextLabel")
+local LocalPlayer = Instance.new("TextLabel")
+local Open = Instance.new("Frame")
+local TextButton = Instance.new("TextButton")
+
+--Properties:
+
+AdminPanel.Name = "AdminPanel"
+AdminPanel.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+AdminPanel.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+AdminPanel.ResetOnSpawn = false
+
+GuiFrame.Name = "GuiFrame"
+GuiFrame.Parent = AdminPanel
+GuiFrame.AnchorPoint = Vector2.new(0.5, 0.5)
+GuiFrame.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+GuiFrame.BorderColor3 = Color3.fromRGB(0, 119, 179)
+GuiFrame.BorderSizePixel = 6
+GuiFrame.Position = UDim2.new(0.5, 0, 0.5, 0)
+GuiFrame.Size = UDim2.new(0, 753, 0, 461)
+
+Deletetool.Name = "Deletetool"
+Deletetool.Parent = GuiFrame
+Deletetool.AnchorPoint = Vector2.new(0.5, 0.5)
+Deletetool.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+Deletetool.Position = UDim2.new(0.682816088, 0, 0.206334889, 0)
+Deletetool.Size = UDim2.new(0, 134, 0, 33)
+Deletetool.Font = Enum.Font.Cartoon
+Deletetool.Text = "Delete Holding Tool"
+Deletetool.TextColor3 = Color3.fromRGB(0, 0, 0)
+Deletetool.TextSize = 14.000
+
+DestoryGui.Name = "DestoryGui"
+DestoryGui.Parent = GuiFrame
+DestoryGui.AnchorPoint = Vector2.new(0.5, 0.5)
+DestoryGui.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+DestoryGui.Position = UDim2.new(0.872362435, 0, 0.206335008, 0)
+DestoryGui.Size = UDim2.new(0, 135, 0, 33)
+DestoryGui.Font = Enum.Font.Cartoon
+DestoryGui.Text = "Destroy Gui"
+DestoryGui.TextColor3 = Color3.fromRGB(0, 0, 0)
+DestoryGui.TextSize = 14.000
+
+Others.Name = "Others"
+Others.Parent = GuiFrame
+Others.AnchorPoint = Vector2.new(0.5, 0.5)
+Others.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Others.BackgroundTransparency = 1.000
+Others.Position = UDim2.new(0.650730371, 0, 0.0883730948, 0)
+Others.Size = UDim2.new(0, 200, 0, 50)
+Others.Font = Enum.Font.Cartoon
+Others.Text = "Others"
+Others.TextColor3 = Color3.fromRGB(0, 0, 0)
+Others.TextSize = 32.000
+
+Settings.Name = "Settings"
+Settings.Parent = GuiFrame
+Settings.AnchorPoint = Vector2.new(0.5, 0.5)
+Settings.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Settings.BackgroundTransparency = 1.000
+Settings.Position = UDim2.new(0.867197871, 0, 0.0883730948, 0)
+Settings.Size = UDim2.new(0, 200, 0, 50)
+Settings.Font = Enum.Font.Cartoon
+Settings.Text = "Settings"
+Settings.TextColor3 = Color3.fromRGB(0, 0, 0)
+Settings.TextSize = 32.000
+
+EnableBackpack.Name = "EnableBackpack"
+EnableBackpack.Parent = GuiFrame
+EnableBackpack.AnchorPoint = Vector2.new(0.5, 0.5)
+EnableBackpack.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+EnableBackpack.Position = UDim2.new(0.682816088, 0, 0.308287144, 0)
+EnableBackpack.Size = UDim2.new(0, 134, 0, 33)
+EnableBackpack.Font = Enum.Font.Cartoon
+EnableBackpack.Text = "Enable Backpack : OFF"
+EnableBackpack.TextColor3 = Color3.fromRGB(0, 0, 0)
+EnableBackpack.TextSize = 14.000
+
+Close.Name = "Close"
+Close.Parent = GuiFrame
+Close.AnchorPoint = Vector2.new(0.5, 0.5)
+Close.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Close.Position = UDim2.new(0.967463493, 0, 0.0477223434, 0)
+Close.Size = UDim2.new(0, 49, 0, 44)
+Close.Font = Enum.Font.Nunito
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextSize = 40.000
+
+InfiniteYield.Name = "Infinite Yield"
+InfiniteYield.Parent = GuiFrame
+InfiniteYield.AnchorPoint = Vector2.new(0.5, 0.5)
+InfiniteYield.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+InfiniteYield.Position = UDim2.new(0.682816088, 0, 0.41240865, 0)
+InfiniteYield.Size = UDim2.new(0, 134, 0, 33)
+InfiniteYield.Font = Enum.Font.Cartoon
+InfiniteYield.Text = "Infinite Yield"
+InfiniteYield.TextColor3 = Color3.fromRGB(0, 0, 0)
+InfiniteYield.TextSize = 14.000
+
+Spam.Name = "Spam"
+Spam.Parent = GuiFrame
+Spam.AnchorPoint = Vector2.new(0.5, 0.5)
+Spam.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Spam.BackgroundTransparency = 1.000
+Spam.Position = UDim2.new(0.555112898, 0, 0.823731005, 0)
+Spam.Size = UDim2.new(0, 200, 0, 50)
+Spam.Font = Enum.Font.SourceSans
+Spam.Text = "Command Spam"
+Spam.TextColor3 = Color3.fromRGB(0, 0, 0)
+Spam.TextSize = 18.000
+
+Spam_2.Name = "Spam"
+Spam_2.Parent = GuiFrame
+Spam_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Spam_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Spam_2.BackgroundTransparency = 1.000
+Spam_2.Position = UDim2.new(0.763612211, 0, 0.823731005, 0)
+Spam_2.Size = UDim2.new(0, 200, 0, 50)
+Spam_2.Font = Enum.Font.SourceSans
+Spam_2.Text = "1 Command per"
+Spam_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+Spam_2.TextSize = 18.000
+
+seconds.Name = "seconds"
+seconds.Parent = GuiFrame
+seconds.AnchorPoint = Vector2.new(0.5, 0.5)
+seconds.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+seconds.BackgroundTransparency = 1.000
+seconds.Position = UDim2.new(0.879814088, 0, 0.938698471, 0)
+seconds.Size = UDim2.new(0, 55, 0, 26)
+seconds.Font = Enum.Font.SourceSans
+seconds.Text = "Seconds"
+seconds.TextColor3 = Color3.fromRGB(0, 0, 0)
+seconds.TextSize = 18.000
+
+startthemachine.Name = "startthemachine"
+startthemachine.Parent = GuiFrame
+startthemachine.AnchorPoint = Vector2.new(0.5, 0.5)
+startthemachine.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+startthemachine.Position = UDim2.new(0.93380785, 0, 0.840954959, 0)
+startthemachine.Size = UDim2.new(0, 84, 0, 65)
+startthemachine.Font = Enum.Font.Cartoon
+startthemachine.Text = "START"
+startthemachine.TextColor3 = Color3.fromRGB(0, 0, 0)
+startthemachine.TextSize = 24.000
+
+CommandTarget.Name = "CommandTarget"
+CommandTarget.Parent = GuiFrame
+CommandTarget.AnchorPoint = Vector2.new(0.5, 0.5)
+CommandTarget.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+CommandTarget.Position = UDim2.new(0.554845214, 0, 0.912507832, 0)
+CommandTarget.Size = UDim2.new(0, 200, 0, 50)
+CommandTarget.Font = Enum.Font.SourceSans
+CommandTarget.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
+CommandTarget.PlaceholderText = ":explode someoneyoudislike"
+CommandTarget.Text = ""
+CommandTarget.TextColor3 = Color3.fromRGB(0, 0, 0)
+CommandTarget.TextSize = 14.000
+
+Delay.Name = "Delay"
+Delay.Parent = GuiFrame
+Delay.AnchorPoint = Vector2.new(0.5, 0.5)
+Delay.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+Delay.Position = UDim2.new(0.762874246, 0, 0.912507832, 0)
+Delay.Size = UDim2.new(0, 96, 0, 50)
+Delay.Font = Enum.Font.SourceSans
+Delay.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
+Delay.PlaceholderText = "0.5"
+Delay.Text = ""
+Delay.TextColor3 = Color3.fromRGB(0, 0, 0)
+Delay.TextSize = 14.000
+
+Exploits.Name = "Exploits"
+Exploits.Parent = GuiFrame
+Exploits.AnchorPoint = Vector2.new(0.5, 0.5)
+Exploits.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Exploits.BackgroundTransparency = 1.000
+Exploits.Position = UDim2.new(0.375272602, 0, 0.0883730799, 0)
+Exploits.Size = UDim2.new(0, 180, 0, 50)
+Exploits.Font = Enum.Font.Cartoon
+Exploits.Text = "Exploits"
+Exploits.TextColor3 = Color3.fromRGB(0, 0, 0)
+Exploits.TextSize = 32.000
+
+BatKnightFF.Name = "BatKnightFF"
+BatKnightFF.Parent = GuiFrame
+BatKnightFF.AnchorPoint = Vector2.new(0.5, 0.5)
+BatKnightFF.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+BatKnightFF.Position = UDim2.new(0.496893108, 0, 0.25622642, 0)
+BatKnightFF.Size = UDim2.new(0, 134, 0, 33)
+BatKnightFF.Font = Enum.Font.Cartoon
+BatKnightFF.Text = "Bat Knight FF"
+BatKnightFF.TextColor3 = Color3.fromRGB(0, 0, 0)
+BatKnightFF.TextSize = 14.000
+
+PlayerJoinsLeaves.Name = "PlayerJoinsLeaves"
+PlayerJoinsLeaves.Parent = GuiFrame
+PlayerJoinsLeaves.AnchorPoint = Vector2.new(0.5, 0.5)
+PlayerJoinsLeaves.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+PlayerJoinsLeaves.Position = UDim2.new(0.682816088, 0, 0.514360905, 0)
+PlayerJoinsLeaves.Size = UDim2.new(0, 134, 0, 33)
+PlayerJoinsLeaves.Font = Enum.Font.Cartoon
+PlayerJoinsLeaves.Text = "Joins & Leaves Notifier"
+PlayerJoinsLeaves.TextColor3 = Color3.fromRGB(0, 0, 0)
+PlayerJoinsLeaves.TextSize = 14.000
+PlayerJoinsLeaves.TextWrapped = true
+
+GearsGuiMob.Name = "GearsGuiMob"
+GearsGuiMob.Parent = GuiFrame
+GearsGuiMob.AnchorPoint = Vector2.new(0.5, 0.5)
+GearsGuiMob.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+GearsGuiMob.Position = UDim2.new(0.682816088, 0, 0.624989927, 0)
+GearsGuiMob.Size = UDim2.new(0, 134, 0, 33)
+GearsGuiMob.Font = Enum.Font.Cartoon
+GearsGuiMob.Text = "Gears Gui Mobile"
+GearsGuiMob.TextColor3 = Color3.fromRGB(0, 0, 0)
+GearsGuiMob.TextSize = 14.000
+GearsGuiMob.TextWrapped = true
+
+GearsGuiPC.Name = "GearsGuiPC"
+GearsGuiPC.Parent = GuiFrame
+GearsGuiPC.AnchorPoint = Vector2.new(0.5, 0.5)
+GearsGuiPC.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+GearsGuiPC.Position = UDim2.new(0.682816088, 0, 0.733449817, 0)
+GearsGuiPC.Size = UDim2.new(0, 134, 0, 33)
+GearsGuiPC.Font = Enum.Font.Cartoon
+GearsGuiPC.Text = "Gears Gui PC (Press P)"
+GearsGuiPC.TextColor3 = Color3.fromRGB(0, 0, 0)
+GearsGuiPC.TextSize = 14.000
+GearsGuiPC.TextWrapped = true
+
+PermanentBat.Name = "Permanent Bat"
+PermanentBat.Parent = GuiFrame
+PermanentBat.AnchorPoint = Vector2.new(0.5, 0.5)
+PermanentBat.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+PermanentBat.Position = UDim2.new(0.496893108, 0, 0.356009483, 0)
+PermanentBat.Size = UDim2.new(0, 134, 0, 33)
+PermanentBat.Font = Enum.Font.Cartoon
+PermanentBat.Text = "Permanent Bat"
+PermanentBat.TextColor3 = Color3.fromRGB(0, 0, 0)
+PermanentBat.TextSize = 14.000
+
+BatTextLabel.Name = "BatTextLabel"
+BatTextLabel.Parent = GuiFrame
+BatTextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+BatTextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BatTextLabel.BackgroundTransparency = 1.000
+BatTextLabel.Position = UDim2.new(0.498007953, 0, 0.164295003, 0)
+BatTextLabel.Size = UDim2.new(0, 200, 0, 50)
+BatTextLabel.Font = Enum.Font.SourceSans
+BatTextLabel.Text = "Bat Knight Bat Sword"
+BatTextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+BatTextLabel.TextSize = 15.000
+
+VampireVanquisherText.Name = "VampireVanquisherText"
+VampireVanquisherText.Parent = GuiFrame
+VampireVanquisherText.AnchorPoint = Vector2.new(0.5, 0.5)
+VampireVanquisherText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+VampireVanquisherText.BackgroundTransparency = 1.000
+VampireVanquisherText.Position = UDim2.new(0.494532287, 0, 0.431106269, 0)
+VampireVanquisherText.Size = UDim2.new(0, 143, 0, 34)
+VampireVanquisherText.Font = Enum.Font.SourceSans
+VampireVanquisherText.Text = "Vampire Vanquisher: Sword and Shield"
+VampireVanquisherText.TextColor3 = Color3.fromRGB(0, 0, 0)
+VampireVanquisherText.TextSize = 10.000
+
+vampireinfinitestun.Name = "vampireinfinitestun"
+vampireinfinitestun.Parent = GuiFrame
+vampireinfinitestun.AnchorPoint = Vector2.new(0.5, 0.5)
+vampireinfinitestun.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+vampireinfinitestun.Position = UDim2.new(0.496893108, 0, 0.514360905, 0)
+vampireinfinitestun.Size = UDim2.new(0, 134, 0, 33)
+vampireinfinitestun.Font = Enum.Font.Cartoon
+vampireinfinitestun.Text = "Infinite Stun + Disables Backpack (Q)"
+vampireinfinitestun.TextColor3 = Color3.fromRGB(0, 0, 0)
+vampireinfinitestun.TextSize = 14.000
+vampireinfinitestun.TextWrapped = true
+
+vampirecrash.Name = "vampirecrash"
+vampirecrash.Parent = GuiFrame
+vampirecrash.AnchorPoint = Vector2.new(0.5, 0.5)
+vampirecrash.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+vampirecrash.Position = UDim2.new(0.496893108, 0, 0.731280684, 0)
+vampirecrash.Size = UDim2.new(0, 134, 0, 33)
+vampirecrash.Font = Enum.Font.Cartoon
+vampirecrash.Text = "Crash Server"
+vampirecrash.TextColor3 = Color3.fromRGB(0, 0, 0)
+vampirecrash.TextSize = 14.000
+vampirecrash.TextWrapped = true
+
+Warning.Name = "Warning"
+Warning.Parent = GuiFrame
+Warning.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+Warning.BorderColor3 = Color3.fromRGB(0, 119, 179)
+Warning.BorderSizePixel = 6
+Warning.Position = UDim2.new(0.240453929, 0, 0.135543436, 0)
+Warning.Size = UDim2.new(0, 473, 0, 242)
+Warning.Visible = false
+
+WarningText.Name = "WarningText"
+WarningText.Parent = Warning
+WarningText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WarningText.BackgroundTransparency = 1.000
+WarningText.Position = UDim2.new(0.00211416488, 0, -0.0591637492, 0)
+WarningText.Size = UDim2.new(0, 472, 0, 110)
+WarningText.Font = Enum.Font.Cartoon
+WarningText.Text = "Warning: You are about to crash server are you sure you want to continue?"
+WarningText.TextColor3 = Color3.fromRGB(0, 0, 0)
+WarningText.TextSize = 26.000
+WarningText.TextWrapped = true
+
+YES.Name = "YES"
+YES.Parent = Warning
+YES.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+YES.Position = UDim2.new(0.0317124724, 0, 0.657024801, 0)
+YES.Size = UDim2.new(0, 200, 0, 50)
+YES.Font = Enum.Font.Cartoon
+YES.Text = "YES"
+YES.TextColor3 = Color3.fromRGB(0, 0, 0)
+YES.TextSize = 44.000
+
+NOO.Name = "NOO"
+NOO.Parent = Warning
+NOO.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+NOO.Position = UDim2.new(0.534883738, 0, 0.65289259, 0)
+NOO.Size = UDim2.new(0, 200, 0, 50)
+NOO.Font = Enum.Font.Cartoon
+NOO.Text = "NO"
+NOO.TextColor3 = Color3.fromRGB(255, 255, 255)
+NOO.TextSize = 44.000
+
+NoteText.Name = "NoteText"
+NoteText.Parent = Warning
+NoteText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+NoteText.BackgroundTransparency = 1.000
+NoteText.Position = UDim2.new(0.00211416488, 0, 0.18877013, 0)
+NoteText.Size = UDim2.new(0, 472, 0, 110)
+NoteText.Font = Enum.Font.Cartoon
+NoteText.Text = "Note: If it doesnt work the game uses another vampirevanquisher version"
+NoteText.TextColor3 = Color3.fromRGB(255, 0, 0)
+NoteText.TextSize = 26.000
+NoteText.TextWrapped = true
+
+finishercamera.Name = "finishercamera"
+finishercamera.Parent = GuiFrame
+finishercamera.AnchorPoint = Vector2.new(0.5, 0.5)
+finishercamera.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+finishercamera.Position = UDim2.new(0.495565087, 0, 0.624989986, 0)
+finishercamera.Size = UDim2.new(0, 134, 0, 33)
+finishercamera.Font = Enum.Font.Cartoon
+finishercamera.Text = "Glitch Finisher's Camera"
+finishercamera.TextColor3 = Color3.fromRGB(0, 0, 0)
+finishercamera.TextSize = 14.000
+finishercamera.TextWrapped = true
+
+SpamOrbs.Name = "SpamOrbs"
+SpamOrbs.Parent = GuiFrame
+SpamOrbs.AnchorPoint = Vector2.new(0.5, 0.5)
+SpamOrbs.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+SpamOrbs.Position = UDim2.new(0.305658042, 0, 0.25622642, 0)
+SpamOrbs.Size = UDim2.new(0, 134, 0, 33)
+SpamOrbs.Font = Enum.Font.Cartoon
+SpamOrbs.Text = "Spam Crystal Orbs : OFF"
+SpamOrbs.TextColor3 = Color3.fromRGB(0, 0, 0)
+SpamOrbs.TextSize = 14.000
+
+CrystalOrbLauncherLabel.Name = "CrystalOrbLauncherLabel"
+CrystalOrbLauncherLabel.Parent = GuiFrame
+CrystalOrbLauncherLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+CrystalOrbLauncherLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CrystalOrbLauncherLabel.BackgroundTransparency = 1.000
+CrystalOrbLauncherLabel.Position = UDim2.new(0.305444866, 0, 0.164295003, 0)
+CrystalOrbLauncherLabel.Size = UDim2.new(0, 200, 0, 50)
+CrystalOrbLauncherLabel.Font = Enum.Font.SourceSans
+CrystalOrbLauncherLabel.Text = "Orb Crystal Launcher"
+CrystalOrbLauncherLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+CrystalOrbLauncherLabel.TextSize = 15.000
+
+SkullCracker.Name = "SkullCracker"
+SkullCracker.Parent = GuiFrame
+SkullCracker.AnchorPoint = Vector2.new(0.5, 0.5)
+SkullCracker.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SkullCracker.BackgroundTransparency = 1.000
+SkullCracker.Position = UDim2.new(0.304661006, 0, 0.35486424, 0)
+SkullCracker.Size = UDim2.new(0, 199, 0, 49)
+SkullCracker.Font = Enum.Font.SourceSans
+SkullCracker.Text = "Skull Cracker - Level Up Exclusive"
+SkullCracker.TextColor3 = Color3.fromRGB(0, 0, 0)
+SkullCracker.TextSize = 11.000
+
+SkullCrackernobackpack.Name = "SkullCrackernobackpack"
+SkullCrackernobackpack.Parent = GuiFrame
+SkullCrackernobackpack.AnchorPoint = Vector2.new(0.5, 0.5)
+SkullCrackernobackpack.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+SkullCrackernobackpack.Position = UDim2.new(0.304330021, 0, 0.434100598, 0)
+SkullCrackernobackpack.Size = UDim2.new(0, 134, 0, 33)
+SkullCrackernobackpack.Font = Enum.Font.Cartoon
+SkullCrackernobackpack.Text = "Disable Backpack"
+SkullCrackernobackpack.TextColor3 = Color3.fromRGB(0, 0, 0)
+SkullCrackernobackpack.TextSize = 14.000
+SkullCrackernobackpack.TextWrapped = true
+
+FrostBlade.Name = "FrostBlade"
+FrostBlade.Parent = GuiFrame
+FrostBlade.AnchorPoint = Vector2.new(0.5, 0.5)
+FrostBlade.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+FrostBlade.BackgroundTransparency = 1.000
+FrostBlade.Position = UDim2.new(0.303332984, 0, 0.530569255, 0)
+FrostBlade.Size = UDim2.new(0, 199, 0, 49)
+FrostBlade.Font = Enum.Font.SourceSans
+FrostBlade.Text = "Frost Blade"
+FrostBlade.TextColor3 = Color3.fromRGB(0, 0, 0)
+FrostBlade.TextSize = 18.000
+
+IceDisableBackpack.Name = "IceDisableBackpack"
+IceDisableBackpack.Parent = GuiFrame
+IceDisableBackpack.AnchorPoint = Vector2.new(0.5, 0.5)
+IceDisableBackpack.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+IceDisableBackpack.Position = UDim2.new(0.304330021, 0, 0.624989927, 0)
+IceDisableBackpack.Size = UDim2.new(0, 134, 0, 33)
+IceDisableBackpack.Font = Enum.Font.Cartoon
+IceDisableBackpack.Text = "Disable Backpack"
+IceDisableBackpack.TextColor3 = Color3.fromRGB(0, 0, 0)
+IceDisableBackpack.TextSize = 14.000
+IceDisableBackpack.TextWrapped = true
+
+NoRoot.Name = "NoRoot"
+NoRoot.Parent = GuiFrame
+NoRoot.AnchorPoint = Vector2.new(0.5, 0.5)
+NoRoot.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+NoRoot.Position = UDim2.new(0.101142764, 0, 0.178135276, 0)
+NoRoot.Size = UDim2.new(0, 134, 0, 33)
+NoRoot.Font = Enum.Font.Cartoon
+NoRoot.Text = "Immune to :explode"
+NoRoot.TextColor3 = Color3.fromRGB(0, 0, 0)
+NoRoot.TextSize = 14.000
+NoRoot.TextWrapped = true
+
+BreakJointsLeftArm.Name = "BreakJoints LeftArm"
+BreakJointsLeftArm.Parent = GuiFrame
+BreakJointsLeftArm.AnchorPoint = Vector2.new(0.5, 0.5)
+BreakJointsLeftArm.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+BreakJointsLeftArm.Position = UDim2.new(0.101142764, 0, 0.308287144, 0)
+BreakJointsLeftArm.Size = UDim2.new(0, 134, 0, 33)
+BreakJointsLeftArm.Font = Enum.Font.Cartoon
+BreakJointsLeftArm.Text = "BreakJoints Left Arm"
+BreakJointsLeftArm.TextColor3 = Color3.fromRGB(0, 0, 0)
+BreakJointsLeftArm.TextSize = 14.000
+BreakJointsLeftArm.TextWrapped = true
+
+BreakerDisableBackpack.Name = "BreakerDisableBackpack"
+BreakerDisableBackpack.Parent = GuiFrame
+BreakerDisableBackpack.AnchorPoint = Vector2.new(0.5, 0.5)
+BreakerDisableBackpack.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+BreakerDisableBackpack.Position = UDim2.new(0.305658042, 0, 0.82238692, 0)
+BreakerDisableBackpack.Size = UDim2.new(0, 134, 0, 33)
+BreakerDisableBackpack.Font = Enum.Font.Cartoon
+BreakerDisableBackpack.Text = "Disable Backpack"
+BreakerDisableBackpack.TextColor3 = Color3.fromRGB(0, 0, 0)
+BreakerDisableBackpack.TextSize = 14.000
+BreakerDisableBackpack.TextWrapped = true
+
+IceBreak.Name = "IceBreak"
+IceBreak.Parent = GuiFrame
+IceBreak.AnchorPoint = Vector2.new(0.5, 0.5)
+IceBreak.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+IceBreak.BackgroundTransparency = 1.000
+IceBreak.Position = UDim2.new(0.304661006, 0, 0.730135381, 0)
+IceBreak.Size = UDim2.new(0, 199, 0, 49)
+IceBreak.Font = Enum.Font.SourceSans
+IceBreak.Text = "Ice Breaker"
+IceBreak.TextColor3 = Color3.fromRGB(0, 0, 0)
+IceBreak.TextSize = 18.000
+
+LocalPlayer.Name = "LocalPlayer"
+LocalPlayer.Parent = GuiFrame
+LocalPlayer.AnchorPoint = Vector2.new(0.5, 0.5)
+LocalPlayer.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+LocalPlayer.BackgroundTransparency = 1.000
+LocalPlayer.Position = UDim2.new(0.114230335, 0, 0.0883730799, 0)
+LocalPlayer.Size = UDim2.new(0, 152, 0, 36)
+LocalPlayer.Font = Enum.Font.Cartoon
+LocalPlayer.Text = "LocalPlayer"
+LocalPlayer.TextColor3 = Color3.fromRGB(0, 0, 0)
+LocalPlayer.TextSize = 32.000
+
+Open.Name = "Open"
+Open.Parent = AdminPanel
+Open.AnchorPoint = Vector2.new(0.5, 0.5)
+Open.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+Open.BorderColor3 = Color3.fromRGB(0, 85, 127)
+Open.BorderSizePixel = 3
+Open.Position = UDim2.new(0.0640316233, 0, 0.463272125, 0)
+Open.Size = UDim2.new(0, 162, 0, 55)
+
+TextButton.Parent = Open
+TextButton.AnchorPoint = Vector2.new(0.5, 0.5)
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.BackgroundTransparency = 1.000
+TextButton.BorderSizePixel = 0
+TextButton.Position = UDim2.new(0.478395075, 0, 0.4909091, 0)
+TextButton.Size = UDim2.new(0, 169, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Open"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 30.000
+
+-- Scripts:
+
+local function EHOPU_fake_script() -- Deletetool.LocalScript 
+	local script = Instance.new('LocalScript', Deletetool)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool") then
+			game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool"):Destroy()
+		end
+		
+		
+	end)
+end
+coroutine.wrap(EHOPU_fake_script)()
+local function WONPO_fake_script() -- DestoryGui.LocalScript 
+	local script = Instance.new('LocalScript', DestoryGui)
+
+	script.Parent.MouseButton1Click:Connect(function()	
+	script.Parent.Parent.Parent.Parent.AdminPanel:Destroy()
+	end)
+end
+coroutine.wrap(WONPO_fake_script)()
+local function EAAALW_fake_script() -- EnableBackpack.LocalScript 
+	local script = Instance.new('LocalScript', EnableBackpack)
+
+	local button = script.Parent
+	_G.BackpackEnabled = false
+	local function enabletoggle()
+		if button.BackgroundColor3 == Color3.fromRGB(170, 0, 0) then
+			button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+			button.Text = "Enable Backpack : ON"
+			_G.BackpackEnabled = true
+			pcall(function()
+				while task.wait(.1) do
+					if _G.BackpackEnabled == true then
+						print("workie")
+						game:GetService("StarterGui"):SetCoreGuiEnabled("Backpack", true)
+					elseif _G.BackpackEnabled == false then break end
+				end
+			end)
+		end
+	end
+	local function disabletoggle()
+		if button.BackgroundColor3 == Color3.fromRGB(0, 255, 0) then
+			_G.BackpackEnabled = false
+			button.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+			button.Text = "Enable Backpack : ON"
+			print("STOP")
+		end
+	end
+	button.MouseButton1Click:Connect(function()
+		if _G.BackpackEnabled == false then
+			enabletoggle()
+		end
+		if _G.BackpackEnabled == true then
+			disabletoggle()
+		end
+	end)
+end
+coroutine.wrap(EAAALW_fake_script)()
+local function VPUQLI_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
+
+	script.Parent.MouseButton1Click:Connect(function()	
+		script.Parent.Parent.Parent.GuiFrame.Visible = false
+		script.Parent.Parent.Parent.Open.Visible = true
+	end)
+end
+coroutine.wrap(VPUQLI_fake_script)()
+local function NKFZO_fake_script() -- InfiniteYield.LocalScript 
+	local script = Instance.new('LocalScript', InfiniteYield)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+	end)
+end
+coroutine.wrap(NKFZO_fake_script)()
+local function AKXRQ_fake_script() -- startthemachine.LocalScript 
+	local script = Instance.new('LocalScript', startthemachine)
+
+	local button = script.Parent
+	_G.StartSpam = false
+	local function enabletoggle()
+		if button.BackgroundColor3 == Color3.fromRGB(0, 255, 0) then
+			button.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+			button.Text = "STOP"
+			_G.StartSpam = true
+			pcall(function()
+				while task.wait(tonumber(script.Parent.Parent.Delay.Text)) do
+					if _G.StartSpam == true then
+						print("STARTING")
+						game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(tostring(script.Parent.Parent.CommandTarget.Text))
+					elseif _G.StartSpam == false then break end
+				end
+			end)
+		end
+	end
+	local function disabletoggle()
+		if button.BackgroundColor3 == Color3.fromRGB(170, 0, 0) then
+			_G.StartSpam = false
+			button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+			button.Text = "START"
+			print("STOP")
+		end
+	end
+	button.MouseButton1Click:Connect(function()
+		if _G.StartSpam == false then
+			enabletoggle()
+		end
+		if _G.StartSpam == true then
+			disabletoggle()
+		end
+	end)
+end
+coroutine.wrap(AKXRQ_fake_script)()
+local function DGEKBG_fake_script() -- BatKnightFF.LocalScript 
+	local script = Instance.new('LocalScript', BatKnightFF)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		local function myoldhumanoid()
+		game.Players.LocalPlayer.Character.Humanoid.AutoRotate = true
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+		end
+		
+		if game.Players.LocalPlayer.Character:FindFirstChild("BatKnightBatSword") then
+			game:GetService("Players").LocalPlayer.Character.BatKnightBatSword.Server.BatTransform.DisableBackpack:Destroy()	
+			local args = {[1] = Enum.KeyCode.Q}
+			game:GetService("Players").LocalPlayer.Character.BatKnightBatSword.Remote:FireServer(unpack(args))
+			repeat wait() until game.Players.LocalPlayer.Character.Humanoid.AutoRotate == false and game.Players.LocalPlayer.Character.Humanoid.JumpPower == 0
+			myoldhumanoid()
+		end
+		
+		
+		
+		
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("BatKnightBatSword") then
+			game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("BatKnightBatSword"))
+			if game.Players.LocalPlayer.Character:FindFirstChild("BatKnightBatSword") then
+			game:GetService("Players").LocalPlayer.Character.BatKnightBatSword.Server.BatTransform.DisableBackpack:Destroy()
+				local args = {[1] = Enum.KeyCode.Q}
+				game:GetService("Players").LocalPlayer.Character.BatKnightBatSword.Remote:FireServer(unpack(args))
+				repeat wait() until game.Players.LocalPlayer.Character.Humanoid.AutoRotate == false and game.Players.LocalPlayer.Character.Humanoid.JumpPower == 0
+				myoldhumanoid()
+			end
+			end
+		
+		
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("BatKnightBatSword") == nil and game.Players.LocalPlayer.Character:FindFirstChild("BatKnightBatSword") == nil then
+			game.StarterGui:SetCore("SendNotification",  {
+				Title = "Unable to find gear.";
+				Text = "The gear id has been set to your clipboard (17680660)";
+				Icon = "rbxassetid://6035067826";
+				Duration = 5;
+				Button1 = "Okay...";
+			})
+			setclipboard(17680660)
+		end
+	end)
+end
+coroutine.wrap(DGEKBG_fake_script)()
+local function GEUH_fake_script() -- PlayerJoinsLeaves.LocalScript 
+	local script = Instance.new('LocalScript', PlayerJoinsLeaves)
+
+	local button = script.Parent
+	local debris = game:GetService("Debris")
+	button.MouseButton1Click:Connect(function()
+		game.Players.PlayerAdded:Connect(function(player)
+			local hoho = Instance.new("Sound", game.Workspace)
+			hoho.Volume = 1.5
+			hoho.SoundId = "rbxassetid://1523818134"
+			game.StarterGui:SetCore("SendNotification",  {
+				Title = "A Player has joined.";
+				Text = "DisplayName: "..player.DisplayName .. " Name: "..player.Name .. " AccountAge: "..player.AccountAge .." Days";
+				Icon = "rbxassetid://6031082527";
+				Duration = 5;
+				Button1 = "Dismiss";
+			})
+			hoho:Play()
+			debris:AddItem(hoho, 3)
+		end)
+	
+		game.Players.PlayerRemoving:Connect(function(player)
+			local hehe = Instance.new("Sound", game.Workspace)
+			hehe.Volume = 1.5
+			hehe.SoundId = "rbxassetid://1523818134"
+			game.StarterGui:SetCore("SendNotification",  {
+				Title = "A Player has left.";
+				Text = "DisplayName: "..player.DisplayName .. " Name: "..player.Name .. " AccountAge: "..player.AccountAge .." Days";
+				Icon = "rbxassetid://6031082522";
+				Duration = 5;
+				Button1 = "Dismiss";
+			})
+			hehe:Play()
+			debris:AddItem(hehe, 3)
+		end)
+		end)
+	
+end
+coroutine.wrap(GEUH_fake_script)()
+local function UUUNAPL_fake_script() -- GearsGuiMob.LocalScript 
+	local script = Instance.new('LocalScript', GearsGuiMob)
+
+	local button = script.Parent
+	button.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/NotKendolaser/gears-gui/main/mobile"),true))()
+		end)
+	
+end
+coroutine.wrap(UUUNAPL_fake_script)()
+local function PLJJTV_fake_script() -- GearsGuiPC.LocalScript 
+	local script = Instance.new('LocalScript', GearsGuiPC)
+
+	local button = script.Parent
+	button.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet(("https://raw.githubusercontent.com/NotKendolaser/gears-gui/main/pc"),true))()
+		end)
+	
+end
+coroutine.wrap(PLJJTV_fake_script)()
+local function TUDCNQ_fake_script() -- PermanentBat.LocalScript 
+	local script = Instance.new('LocalScript', PermanentBat)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	
+		
+		if game.Players.LocalPlayer.Character:FindFirstChild("BatKnightBatSword") then
+			game:GetService("Players").LocalPlayer.Character.BatKnightBatSword.Server.BatTransform.EnableBackpack:Destroy()	
+			local args = {[1] = Enum.KeyCode.Q}
+			game:GetService("Players").LocalPlayer.Character.BatKnightBatSword.Remote:FireServer(unpack(args))
+	
+		end
+		
+		
+		
+		
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("BatKnightBatSword") then
+			game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("BatKnightBatSword"))
+			if game.Players.LocalPlayer.Character:FindFirstChild("BatKnightBatSword") then
+			game:GetService("Players").LocalPlayer.Character.BatKnightBatSword.Server.BatTransform.EnableBackpack:Destroy()
+				local args = {[1] = Enum.KeyCode.Q}
+				game:GetService("Players").LocalPlayer.Character.BatKnightBatSword.Remote:FireServer(unpack(args))
+			end
+			end
+		
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("BatKnightBatSword") == nil and game.Players.LocalPlayer.Character:FindFirstChild("BatKnightBatSword") == nil then
+			game.StarterGui:SetCore("SendNotification",  {
+				Title = "Unable to find gear.";
+				Text = "The gear id has been set to your clipboard (17680660)";
+				Icon = "rbxassetid://6035067826";
+				Duration = 5;
+				Button1 = "Okay...";
+			})
+			setclipboard(17680660)
+		end
+		
+	end)
+end
+coroutine.wrap(TUDCNQ_fake_script)()
+local function YQHASRD_fake_script() -- vampireinfinitestun.LocalScript 
+	local script = Instance.new('LocalScript', vampireinfinitestun)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		
+		if game.Players.LocalPlayer.Character:FindFirstChild("VampireVanquisher") then
+			game:GetService("Players").LocalPlayer.Character.VampireVanquisher.Server.Vanquish.VanquishStun.EnableBackpack:Destroy()	
+		end
+		
+		
+		
+		
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("VampireVanquisher") then
+			game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("VampireVanquisher"))
+			if game.Players.LocalPlayer.Character:FindFirstChild("VampireVanquisher") then
+				game:GetService("Players").LocalPlayer.Character.VampireVanquisher.Server.Vanquish.VanquishStun.EnableBackpack:Destroy()
+			end
+			end
+		
+		
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("VampireVanquisher") == nil and game.Players.LocalPlayer.Character:FindFirstChild("VampireVanquisher") == nil then
+			game.StarterGui:SetCore("SendNotification",  {
+				Title = "Unable to find gear.";
+				Text = "The gear id has been set to your clipboard (94794847)";
+				Icon = "rbxassetid://6035067826";
+				Duration = 5;
+				Button1 = "Okay...";
+			})
+			setclipboard(94794847)
+		end
+	end)
+end
+coroutine.wrap(YQHASRD_fake_script)()
+local function GDCZNA_fake_script() -- vampirecrash.LocalScript 
+	local script = Instance.new('LocalScript', vampirecrash)
+
+	local button = script.Parent
+	local lplr = game.Players.LocalPlayer
+	
+	button.MouseButton1Click:Connect(function()
+		local debris = game:GetService("Debris")
+		local Sound = Instance.new("Sound", game.Workspace)
+		Sound.SoundId = "rbxassetid://7106331408"
+		Sound.Volume = 2
+		Sound:Play()
+		script.Parent.Parent.Warning.Visible = true
+		debris:AddItem(Sound, 3)
+	end)
+end
+coroutine.wrap(GDCZNA_fake_script)()
+local function LIIL_fake_script() -- YES.LocalScript 
+	local script = Instance.new('LocalScript', YES)
+
+	local button = script.Parent
+	local lplr = game.Players.LocalPlayer
+	
+	local function crash()
+		while task.wait() do
+			pcall(function()
+				game.Players.LocalPlayer.Character["Left Arm"].ArmWeld:Destroy()
+			end)
+		end
+	end
+	
+	button.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+		if lplr.Character:FindFirstChild("VampireVanquisher") then
+			crash()
+		end
+	
+		if lplr.Backpack:FindFirstChild("VampireVanquisher") then
+			lplr.Character.Humanoid:EquipTool(lplr.Backpack:FindFirstChild("VampireVanquisher"))
+			if lplr.Character:FindFirstChild("VampireVanquisher") then
+				crash()
+			end
+		end
+	
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("VampireVanquisher") == nil and game.Players.LocalPlayer.Character:FindFirstChild("VampireVanquisher") == nil then
+			game.StarterGui:SetCore("SendNotification",  {
+				Title = "Unable to find gear.";
+				Text = "The gear id has been set to your clipboard (94794847)";
+				Icon = "rbxassetid://6035067826";
+				Duration = 5;
+				Button1 = "Okay...";
+			})
+			setclipboard(94794847)
+		end
+	
+		if game.Players.LocalPlayer.Character:FindFirstChild("VampireVanquisher") and not game.Players.LocalPlayer.Character["Left Arm"]:FindFirstChild("ArmWeld") then
+			game.StarterGui:SetCore("SendNotification",  {
+				Title = "Crash Failed";
+				Text = "The game uses another version of vampire vanquisher";
+				Icon = "rbxassetid://6035067826";
+				Duration = 5;
+				Button1 = "Okay...";
+			})
+			lplr.Character:FindFirstChild("VampireVanquisher"):Destroy()
+		end
+	end)
+end
+coroutine.wrap(LIIL_fake_script)()
+local function MSKS_fake_script() -- NOO.LocalScript 
+	local script = Instance.new('LocalScript', NOO)
+
+	local button = script.Parent
+	
+	button.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Visible = false
+	end)
+end
+coroutine.wrap(MSKS_fake_script)()
+local function IZAZG_fake_script() -- finishercamera.LocalScript 
+	local script = Instance.new('LocalScript', finishercamera)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	
+		if game.Players.LocalPlayer.Character:FindFirstChild("VampireVanquisher") then
+			game:GetService("Players").LocalPlayer.Character.VampireVanquisher.Server.Finisher.Finish.EnableBackpack:Destroy()
+		end
+	
+	
+	
+	
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("VampireVanquisher") then
+			game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("VampireVanquisher"))
+			if game.Players.LocalPlayer.Character:FindFirstChild("VampireVanquisher") then
+				game:GetService("Players").LocalPlayer.Character.VampireVanquisher.Server.Finisher.Finish.EnableBackpack:Destroy()
+			end
+		end
+	
+	
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("VampireVanquisher") == nil and game.Players.LocalPlayer.Character:FindFirstChild("VampireVanquisher") == nil then
+			game.StarterGui:SetCore("SendNotification",  {
+				Title = "Unable to find gear.";
+				Text = "The gear id has been set to your clipboard (94794847)";
+				Icon = "rbxassetid://6035067826";
+				Duration = 5;
+				Button1 = "Okay...";
+			})
+			setclipboard(94794847)
+		end
+	end)
+end
+coroutine.wrap(IZAZG_fake_script)()
+local function VBFGWPE_fake_script() -- SpamOrbs.LocalScript 
+	local script = Instance.new('LocalScript', SpamOrbs)
+
+	local button = script.Parent
+	_G.SpamOrb = false
+	local function enabletoggle()
+		if button.BackgroundColor3 == Color3.fromRGB(170, 0, 0) then
+			button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+			button.Text = "Spam Crystal Orbs : ON"
+			_G.SpamOrb = true
+			pcall(function()
+				while task.wait() do
+					if _G.SpamOrb == true and game:GetService("Players").LocalPlayer.Character:FindFirstChild("OrbBlastgun") then
+						local args = {[1] = CFrame.new(Vector3.new(16.566036224365234, 0, -46.43155288696289), Vector3.new(-0.32959479093551636, -0.004598359111696482, 0.9441112875938416))}game:GetService("Players").LocalPlayer.Character.OrbBlastgun.Mouse1Down:FireServer(unpack(args))
+					elseif _G.SpamOrb == true and game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("OrbBlastgun") then
+						game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("OrbBlastgun"))
+						local args = {[1] = CFrame.new(Vector3.new(16.566036224365234, 0, -46.43155288696289), Vector3.new(-0.32959479093551636, -0.004598359111696482, 0.9441112875938416))}game:GetService("Players").LocalPlayer.Character.OrbBlastgun.Mouse1Down:FireServer(unpack(args))
+					elseif _G.SpamOrb == false then break
+					end
+				end
+			end)
+		end
+	end
+	
+	
+	local function disabletoggle()
+	
+		if button.BackgroundColor3 == Color3.fromRGB(0, 255, 0) then
+			_G.SpamOrb = false
+			button.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
+			button.Text = "Spam Crystal Orbs : OFF"
+			print("STOP")
+		end
+	end
+	button.MouseButton1Click:Connect(function()
+		if game.Players.LocalPlayer.Character:FindFirstChild("OrbBlastgun") == nil and game.Players.LocalPlayer.Backpack:FindFirstChild("OrbBlastgun") == nil then
+			game.StarterGui:SetCore("SendNotification",  {
+				Title = "Unable to find gear.";
+				Text = "The gear id has been set to your clipboard (61916108)";
+				Icon = "rbxassetid://61916108";
+				Duration = 5;
+				Button1 = "Okay...";
+			})
+			setclipboard(61916108)
+		end
+		if _G.SpamOrb == false then
+			enabletoggle()
+		end
+		if _G.SpamOrb == true then
+			disabletoggle()
+		end
+	end)
+end
+coroutine.wrap(VBFGWPE_fake_script)()
+local function BLPDJY_fake_script() -- SkullCrackernobackpack.LocalScript 
+	local script = Instance.new('LocalScript', SkullCrackernobackpack)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		
+		if game.Players.LocalPlayer.Character:FindFirstChild("SkullCracker") then
+			game:GetService("Players").LocalPlayer.Character.SkullCracker.BasherScript.Stun.EnableBackpack:Destroy()	
+		end
+		
+		
+		
+		
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("SkullCracker") then
+			game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("SkullCracker"))
+			if game.Players.LocalPlayer.Character:FindFirstChild("SkullCracker") then
+				game:GetService("Players").LocalPlayer.Character.SkullCracker.BasherScript.Stun.EnableBackpack:Destroy()
+			end
+			end
+		
+		
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("SkullCracker") == nil and game.Players.LocalPlayer.Character:FindFirstChild("SkullCracker") == nil then
+			game.StarterGui:SetCore("SendNotification",  {
+				Title = "Unable to find gear.";
+				Text = "The gear id has been set to your clipboard (65469908)";
+				Icon = "rbxassetid://6035067826";
+				Duration = 5;
+				Button1 = "Okay...";
+			})
+			setclipboard(65469908)
+		end
+	end)
+end
+coroutine.wrap(BLPDJY_fake_script)()
+local function BEZZZW_fake_script() -- IceDisableBackpack.LocalScript 
+	local script = Instance.new('LocalScript', IceDisableBackpack)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		
+		if game.Players.LocalPlayer.Character:FindFirstChild("Frost Blade") then
+			game:GetService("Players").LocalPlayer.Character["Frost Blade"].Server.Freeze.EnableBackpack:Destroy()	
+		end
+		
+		
+		
+		
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("Frost Blade") then
+			game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Frost Blade"))
+		end
+		
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("Ice Breaker") then
+			game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Frost Blade"))
+		end
+		
+		
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("Frost Blade") == nil and game.Players.LocalPlayer.Character:FindFirstChild("Frost Blade") == nil then
+			game.StarterGui:SetCore("SendNotification",  {
+				Title = "Unable to find gear.";
+				Text = "The gear id has been set to your clipboard (99199463)";
+				Icon = "rbxassetid://6035067826";
+				Duration = 5;
+				Button1 = "Okay...";
+			})
+			setclipboard(99199463)
+		end
+		
+		
+	--[[	if game.Players.LocalPlayer.Backpack:FindFirstChild("Ice Breaker") == nil and game.Players.LocalPlayer.Character:FindFirstChild("Ice Breaker") == nil then
+			game.StarterGui:SetCore("SendNotification",  {
+				Title = "Unable to find gear.";
+				Text = "The gear id has been set to your clipboard (87361662)";
+				Icon = "rbxassetid://6035067826";
+				Duration = 5;
+				Button1 = "Okay...";
+			})
+			setclipboard(87361662)
+		end
+	end)]]
+		end)
+end
+coroutine.wrap(BEZZZW_fake_script)()
+local function DKLU_fake_script() -- NoRoot.LocalScript 
+	local script = Instance.new('LocalScript', NoRoot)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
+			game.Players.LocalPlayer.Character.HumanoidRootPart:Destroy()
+		end
+	end)
+end
+coroutine.wrap(DKLU_fake_script)()
+local function ULHSMM_fake_script() -- BreakJointsLeftArm.LocalScript 
+	local script = Instance.new('LocalScript', BreakJointsLeftArm)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		if game.Players.LocalPlayer.Character:FindFirstChild("Left Arm") then
+			game.Players.LocalPlayer.Character["Left Arm"]:BreakJoints()
+			game.StarterGui:SetCore("SendNotification",  {
+				Title = "Lag Switch";
+				Text = "Use The ability to lag switch";
+				Icon = "rbxassetid://6035047377";
+				Duration = 5;
+				Button1 = "Okay...";
+			})
+		end
+	end)
+end
+coroutine.wrap(ULHSMM_fake_script)()
+local function XUMYI_fake_script() -- BreakerDisableBackpack.LocalScript 
+	local script = Instance.new('LocalScript', BreakerDisableBackpack)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		
+		if game.Players.LocalPlayer.Character:FindFirstChild("Ice Breaker") then
+			game:GetService("Players").LocalPlayer.Character["Ice Breaker"].Server.Freeze.EnableBackpack:Destroy()	
+		end
+		
+		
+		
+		
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("Ice Breaker") then
+			game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("Ice Breaker"))
+			if game.Players.LocalPlayer.Character:FindFirstChild("Ice Breaker") then
+				game:GetService("Players").LocalPlayer.Character["Ice Breaker"].Server.Freeze.EnableBackpack:Destroy()
+			end
+			end
+		
+		
+		
+		if game.Players.LocalPlayer.Backpack:FindFirstChild("Ice Breaker") == nil and game.Players.LocalPlayer.Character:FindFirstChild("Ice Breaker") == nil then
+			game.StarterGui:SetCore("SendNotification",  {
+				Title = "Unable to find gear.";
+				Text = "The gear id has been set to your clipboard (87361662)";
+				Icon = "rbxassetid://6035067826";
+				Duration = 5;
+				Button1 = "Okay...";
+			})
+			setclipboard(87361662)
+		end
+	end)
+end
+coroutine.wrap(XUMYI_fake_script)()
+local function MWMLZ_fake_script() -- TextButton.LocalScript 
+	local script = Instance.new('LocalScript', TextButton)
+
+	script.Parent.MouseButton1Click:Connect(function()	
+		script.Parent.Parent.Parent.GuiFrame.Visible = true
+		script.Parent.Parent.Parent.Open.Visible = false
+	end)
+end
+coroutine.wrap(MWMLZ_fake_script)()
