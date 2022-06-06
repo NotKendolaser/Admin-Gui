@@ -45,6 +45,12 @@ local BreakJointsLeftArm = Instance.new("TextButton")
 local BreakerDisableBackpack = Instance.new("TextButton")
 local IceBreak = Instance.new("TextLabel")
 local LocalPlayer = Instance.new("TextLabel")
+local EquipAll = Instance.new("TextButton")
+local UseTools = Instance.new("TextButton")
+local AmountsToolTextBox = Instance.new("TextBox")
+local DelayTool = Instance.new("TextBox")
+local AmountsTXT = Instance.new("TextLabel")
+local DelayTXT = Instance.new("TextLabel")
 local Open = Instance.new("Frame")
 local TextButton = Instance.new("TextButton")
 
@@ -150,7 +156,7 @@ Spam.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Spam.BackgroundTransparency = 1.000
 Spam.Position = UDim2.new(0.555112898, 0, 0.823731005, 0)
 Spam.Size = UDim2.new(0, 200, 0, 50)
-Spam.Font = Enum.Font.SourceSans
+Spam.Font = Enum.Font.Cartoon
 Spam.Text = "Command Spam"
 Spam.TextColor3 = Color3.fromRGB(0, 0, 0)
 Spam.TextSize = 18.000
@@ -162,7 +168,7 @@ Spam_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Spam_2.BackgroundTransparency = 1.000
 Spam_2.Position = UDim2.new(0.763612211, 0, 0.823731005, 0)
 Spam_2.Size = UDim2.new(0, 200, 0, 50)
-Spam_2.Font = Enum.Font.SourceSans
+Spam_2.Font = Enum.Font.Cartoon
 Spam_2.Text = "1 Command per"
 Spam_2.TextColor3 = Color3.fromRGB(0, 0, 0)
 Spam_2.TextSize = 18.000
@@ -174,7 +180,7 @@ seconds.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 seconds.BackgroundTransparency = 1.000
 seconds.Position = UDim2.new(0.879814088, 0, 0.938698471, 0)
 seconds.Size = UDim2.new(0, 55, 0, 26)
-seconds.Font = Enum.Font.SourceSans
+seconds.Font = Enum.Font.Cartoon
 seconds.Text = "Seconds"
 seconds.TextColor3 = Color3.fromRGB(0, 0, 0)
 seconds.TextSize = 18.000
@@ -196,7 +202,7 @@ CommandTarget.AnchorPoint = Vector2.new(0.5, 0.5)
 CommandTarget.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
 CommandTarget.Position = UDim2.new(0.554845214, 0, 0.912507832, 0)
 CommandTarget.Size = UDim2.new(0, 200, 0, 50)
-CommandTarget.Font = Enum.Font.SourceSans
+CommandTarget.Font = Enum.Font.Cartoon
 CommandTarget.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
 CommandTarget.PlaceholderText = ":explode someoneyoudislike"
 CommandTarget.Text = ""
@@ -209,7 +215,7 @@ Delay.AnchorPoint = Vector2.new(0.5, 0.5)
 Delay.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
 Delay.Position = UDim2.new(0.762874246, 0, 0.912507832, 0)
 Delay.Size = UDim2.new(0, 96, 0, 50)
-Delay.Font = Enum.Font.SourceSans
+Delay.Font = Enum.Font.Cartoon
 Delay.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
 Delay.PlaceholderText = "0.5"
 Delay.Text = ""
@@ -293,7 +299,7 @@ BatTextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 BatTextLabel.BackgroundTransparency = 1.000
 BatTextLabel.Position = UDim2.new(0.498007953, 0, 0.164295003, 0)
 BatTextLabel.Size = UDim2.new(0, 200, 0, 50)
-BatTextLabel.Font = Enum.Font.SourceSans
+BatTextLabel.Font = Enum.Font.Cartoon
 BatTextLabel.Text = "Bat Knight Bat Sword"
 BatTextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 BatTextLabel.TextSize = 15.000
@@ -303,9 +309,9 @@ VampireVanquisherText.Parent = GuiFrame
 VampireVanquisherText.AnchorPoint = Vector2.new(0.5, 0.5)
 VampireVanquisherText.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 VampireVanquisherText.BackgroundTransparency = 1.000
-VampireVanquisherText.Position = UDim2.new(0.494532287, 0, 0.431106269, 0)
-VampireVanquisherText.Size = UDim2.new(0, 143, 0, 34)
-VampireVanquisherText.Font = Enum.Font.SourceSans
+VampireVanquisherText.Position = UDim2.new(0.498036742, 0, 0.431106269, 0)
+VampireVanquisherText.Size = UDim2.new(0, 137, 0, 32)
+VampireVanquisherText.Font = Enum.Font.Cartoon
 VampireVanquisherText.Text = "Vampire Vanquisher: Sword and Shield"
 VampireVanquisherText.TextColor3 = Color3.fromRGB(0, 0, 0)
 VampireVanquisherText.TextSize = 10.000
@@ -417,7 +423,7 @@ CrystalOrbLauncherLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 CrystalOrbLauncherLabel.BackgroundTransparency = 1.000
 CrystalOrbLauncherLabel.Position = UDim2.new(0.305444866, 0, 0.164295003, 0)
 CrystalOrbLauncherLabel.Size = UDim2.new(0, 200, 0, 50)
-CrystalOrbLauncherLabel.Font = Enum.Font.SourceSans
+CrystalOrbLauncherLabel.Font = Enum.Font.Cartoon
 CrystalOrbLauncherLabel.Text = "Orb Crystal Launcher"
 CrystalOrbLauncherLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
 CrystalOrbLauncherLabel.TextSize = 15.000
@@ -429,7 +435,7 @@ SkullCracker.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 SkullCracker.BackgroundTransparency = 1.000
 SkullCracker.Position = UDim2.new(0.304661006, 0, 0.35486424, 0)
 SkullCracker.Size = UDim2.new(0, 199, 0, 49)
-SkullCracker.Font = Enum.Font.SourceSans
+SkullCracker.Font = Enum.Font.Cartoon
 SkullCracker.Text = "Skull Cracker - Level Up Exclusive"
 SkullCracker.TextColor3 = Color3.fromRGB(0, 0, 0)
 SkullCracker.TextSize = 11.000
@@ -453,7 +459,7 @@ FrostBlade.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 FrostBlade.BackgroundTransparency = 1.000
 FrostBlade.Position = UDim2.new(0.303332984, 0, 0.530569255, 0)
 FrostBlade.Size = UDim2.new(0, 199, 0, 49)
-FrostBlade.Font = Enum.Font.SourceSans
+FrostBlade.Font = Enum.Font.Cartoon
 FrostBlade.Text = "Frost Blade"
 FrostBlade.TextColor3 = Color3.fromRGB(0, 0, 0)
 FrostBlade.TextSize = 18.000
@@ -486,7 +492,7 @@ BreakJointsLeftArm.Name = "BreakJoints LeftArm"
 BreakJointsLeftArm.Parent = GuiFrame
 BreakJointsLeftArm.AnchorPoint = Vector2.new(0.5, 0.5)
 BreakJointsLeftArm.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
-BreakJointsLeftArm.Position = UDim2.new(0.101142764, 0, 0.308287144, 0)
+BreakJointsLeftArm.Position = UDim2.new(0.101142764, 0, 0.277918369, 0)
 BreakJointsLeftArm.Size = UDim2.new(0, 134, 0, 33)
 BreakJointsLeftArm.Font = Enum.Font.Cartoon
 BreakJointsLeftArm.Text = "BreakJoints Left Arm"
@@ -513,7 +519,7 @@ IceBreak.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 IceBreak.BackgroundTransparency = 1.000
 IceBreak.Position = UDim2.new(0.304661006, 0, 0.730135381, 0)
 IceBreak.Size = UDim2.new(0, 199, 0, 49)
-IceBreak.Font = Enum.Font.SourceSans
+IceBreak.Font = Enum.Font.Cartoon
 IceBreak.Text = "Ice Breaker"
 IceBreak.TextColor3 = Color3.fromRGB(0, 0, 0)
 IceBreak.TextSize = 18.000
@@ -529,6 +535,80 @@ LocalPlayer.Font = Enum.Font.Cartoon
 LocalPlayer.Text = "LocalPlayer"
 LocalPlayer.TextColor3 = Color3.fromRGB(0, 0, 0)
 LocalPlayer.TextSize = 32.000
+
+EquipAll.Name = "EquipAll"
+EquipAll.Parent = GuiFrame
+EquipAll.AnchorPoint = Vector2.new(0.5, 0.5)
+EquipAll.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+EquipAll.Position = UDim2.new(0.101142764, 0, 0.379870653, 0)
+EquipAll.Size = UDim2.new(0, 134, 0, 33)
+EquipAll.Font = Enum.Font.Cartoon
+EquipAll.Text = "Equip All Tools"
+EquipAll.TextColor3 = Color3.fromRGB(0, 0, 0)
+EquipAll.TextSize = 14.000
+EquipAll.TextWrapped = true
+
+UseTools.Name = "UseTools"
+UseTools.Parent = GuiFrame
+UseTools.AnchorPoint = Vector2.new(0.5, 0.5)
+UseTools.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+UseTools.Position = UDim2.new(0.101142764, 0, 0.82238698, 0)
+UseTools.Size = UDim2.new(0, 134, 0, 33)
+UseTools.Font = Enum.Font.Cartoon
+UseTools.Text = "Use Tools"
+UseTools.TextColor3 = Color3.fromRGB(0, 0, 0)
+UseTools.TextSize = 14.000
+UseTools.TextWrapped = true
+
+AmountsToolTextBox.Name = "AmountsToolTextBox"
+AmountsToolTextBox.Parent = GuiFrame
+AmountsToolTextBox.AnchorPoint = Vector2.new(0.5, 0.5)
+AmountsToolTextBox.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+AmountsToolTextBox.Position = UDim2.new(0.0999979526, 0, 0.528559864, 0)
+AmountsToolTextBox.Size = UDim2.new(0, 133, 0, 33)
+AmountsToolTextBox.Font = Enum.Font.Cartoon
+AmountsToolTextBox.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
+AmountsToolTextBox.PlaceholderText = "999"
+AmountsToolTextBox.Text = ""
+AmountsToolTextBox.TextColor3 = Color3.fromRGB(0, 0, 0)
+AmountsToolTextBox.TextSize = 14.000
+
+DelayTool.Name = "DelayTool"
+DelayTool.Parent = GuiFrame
+DelayTool.AnchorPoint = Vector2.new(0.5, 0.5)
+DelayTool.BackgroundColor3 = Color3.fromRGB(0, 85, 255)
+DelayTool.Position = UDim2.new(0.0999979526, 0, 0.678234518, 0)
+DelayTool.Size = UDim2.new(0, 133, 0, 33)
+DelayTool.Font = Enum.Font.Cartoon
+DelayTool.PlaceholderColor3 = Color3.fromRGB(0, 0, 0)
+DelayTool.PlaceholderText = "0"
+DelayTool.Text = ""
+DelayTool.TextColor3 = Color3.fromRGB(0, 0, 0)
+DelayTool.TextSize = 14.000
+
+AmountsTXT.Name = "AmountsTXT"
+AmountsTXT.Parent = GuiFrame
+AmountsTXT.AnchorPoint = Vector2.new(0.5, 0.5)
+AmountsTXT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+AmountsTXT.BackgroundTransparency = 1.000
+AmountsTXT.Position = UDim2.new(0.100929588, 0, 0.457136631, 0)
+AmountsTXT.Size = UDim2.new(0, 200, 0, 50)
+AmountsTXT.Font = Enum.Font.Cartoon
+AmountsTXT.Text = "Amounts of Tools"
+AmountsTXT.TextColor3 = Color3.fromRGB(0, 0, 0)
+AmountsTXT.TextSize = 15.000
+
+DelayTXT.Name = "DelayTXT"
+DelayTXT.Parent = GuiFrame
+DelayTXT.AnchorPoint = Vector2.new(0.5, 0.5)
+DelayTXT.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DelayTXT.BackgroundTransparency = 1.000
+DelayTXT.Position = UDim2.new(0.0996015668, 0, 0.602472842, 0)
+DelayTXT.Size = UDim2.new(0, 200, 0, 50)
+DelayTXT.Font = Enum.Font.Cartoon
+DelayTXT.Text = "Delay"
+DelayTXT.TextColor3 = Color3.fromRGB(0, 0, 0)
+DelayTXT.TextSize = 15.000
 
 Open.Name = "Open"
 Open.Parent = AdminPanel
@@ -553,7 +633,7 @@ TextButton.TextSize = 30.000
 
 -- Scripts:
 
-local function EHOPU_fake_script() -- Deletetool.LocalScript 
+local function DLKEIX_fake_script() -- Deletetool.LocalScript 
 	local script = Instance.new('LocalScript', Deletetool)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -564,16 +644,16 @@ local function EHOPU_fake_script() -- Deletetool.LocalScript
 		
 	end)
 end
-coroutine.wrap(EHOPU_fake_script)()
-local function WONPO_fake_script() -- DestoryGui.LocalScript 
+coroutine.wrap(DLKEIX_fake_script)()
+local function CTEASBV_fake_script() -- DestoryGui.LocalScript 
 	local script = Instance.new('LocalScript', DestoryGui)
 
 	script.Parent.MouseButton1Click:Connect(function()	
 	script.Parent.Parent.Parent.Parent.AdminPanel:Destroy()
 	end)
 end
-coroutine.wrap(WONPO_fake_script)()
-local function EAAALW_fake_script() -- EnableBackpack.LocalScript 
+coroutine.wrap(CTEASBV_fake_script)()
+local function ICRLMPN_fake_script() -- EnableBackpack.LocalScript 
 	local script = Instance.new('LocalScript', EnableBackpack)
 
 	local button = script.Parent
@@ -586,7 +666,6 @@ local function EAAALW_fake_script() -- EnableBackpack.LocalScript
 			pcall(function()
 				while task.wait(.1) do
 					if _G.BackpackEnabled == true then
-						print("workie")
 						game:GetService("StarterGui"):SetCoreGuiEnabled("Backpack", true)
 					elseif _G.BackpackEnabled == false then break end
 				end
@@ -597,8 +676,7 @@ local function EAAALW_fake_script() -- EnableBackpack.LocalScript
 		if button.BackgroundColor3 == Color3.fromRGB(0, 255, 0) then
 			_G.BackpackEnabled = false
 			button.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
-			button.Text = "Enable Backpack : ON"
-			print("STOP")
+			button.Text = "Enable Backpack : OFF"
 		end
 	end
 	button.MouseButton1Click:Connect(function()
@@ -610,8 +688,8 @@ local function EAAALW_fake_script() -- EnableBackpack.LocalScript
 		end
 	end)
 end
-coroutine.wrap(EAAALW_fake_script)()
-local function VPUQLI_fake_script() -- Close.LocalScript 
+coroutine.wrap(ICRLMPN_fake_script)()
+local function DUCH_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	script.Parent.MouseButton1Click:Connect(function()	
@@ -619,16 +697,16 @@ local function VPUQLI_fake_script() -- Close.LocalScript
 		script.Parent.Parent.Parent.Open.Visible = true
 	end)
 end
-coroutine.wrap(VPUQLI_fake_script)()
-local function NKFZO_fake_script() -- InfiniteYield.LocalScript 
+coroutine.wrap(DUCH_fake_script)()
+local function EYZXP_fake_script() -- InfiniteYield.LocalScript 
 	local script = Instance.new('LocalScript', InfiniteYield)
 
 	script.Parent.MouseButton1Click:Connect(function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 	end)
 end
-coroutine.wrap(NKFZO_fake_script)()
-local function AKXRQ_fake_script() -- startthemachine.LocalScript 
+coroutine.wrap(EYZXP_fake_script)()
+local function HPTL_fake_script() -- startthemachine.LocalScript 
 	local script = Instance.new('LocalScript', startthemachine)
 
 	local button = script.Parent
@@ -641,7 +719,6 @@ local function AKXRQ_fake_script() -- startthemachine.LocalScript
 			pcall(function()
 				while task.wait(tonumber(script.Parent.Parent.Delay.Text)) do
 					if _G.StartSpam == true then
-						print("STARTING")
 						game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(tostring(script.Parent.Parent.CommandTarget.Text))
 					elseif _G.StartSpam == false then break end
 				end
@@ -653,7 +730,6 @@ local function AKXRQ_fake_script() -- startthemachine.LocalScript
 			_G.StartSpam = false
 			button.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
 			button.Text = "START"
-			print("STOP")
 		end
 	end
 	button.MouseButton1Click:Connect(function()
@@ -665,8 +741,8 @@ local function AKXRQ_fake_script() -- startthemachine.LocalScript
 		end
 	end)
 end
-coroutine.wrap(AKXRQ_fake_script)()
-local function DGEKBG_fake_script() -- BatKnightFF.LocalScript 
+coroutine.wrap(HPTL_fake_script)()
+local function PQTWFIV_fake_script() -- BatKnightFF.LocalScript 
 	local script = Instance.new('LocalScript', BatKnightFF)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -710,8 +786,8 @@ local function DGEKBG_fake_script() -- BatKnightFF.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DGEKBG_fake_script)()
-local function GEUH_fake_script() -- PlayerJoinsLeaves.LocalScript 
+coroutine.wrap(PQTWFIV_fake_script)()
+local function POBIKWN_fake_script() -- PlayerJoinsLeaves.LocalScript 
 	local script = Instance.new('LocalScript', PlayerJoinsLeaves)
 
 	local button = script.Parent
@@ -749,8 +825,8 @@ local function GEUH_fake_script() -- PlayerJoinsLeaves.LocalScript
 		end)
 	
 end
-coroutine.wrap(GEUH_fake_script)()
-local function UUUNAPL_fake_script() -- GearsGuiMob.LocalScript 
+coroutine.wrap(POBIKWN_fake_script)()
+local function ICAQ_fake_script() -- GearsGuiMob.LocalScript 
 	local script = Instance.new('LocalScript', GearsGuiMob)
 
 	local button = script.Parent
@@ -759,8 +835,8 @@ local function UUUNAPL_fake_script() -- GearsGuiMob.LocalScript
 		end)
 	
 end
-coroutine.wrap(UUUNAPL_fake_script)()
-local function PLJJTV_fake_script() -- GearsGuiPC.LocalScript 
+coroutine.wrap(ICAQ_fake_script)()
+local function EXWJWDJ_fake_script() -- GearsGuiPC.LocalScript 
 	local script = Instance.new('LocalScript', GearsGuiPC)
 
 	local button = script.Parent
@@ -769,8 +845,8 @@ local function PLJJTV_fake_script() -- GearsGuiPC.LocalScript
 		end)
 	
 end
-coroutine.wrap(PLJJTV_fake_script)()
-local function TUDCNQ_fake_script() -- PermanentBat.LocalScript 
+coroutine.wrap(EXWJWDJ_fake_script)()
+local function VJNAK_fake_script() -- PermanentBat.LocalScript 
 	local script = Instance.new('LocalScript', PermanentBat)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -808,8 +884,8 @@ local function TUDCNQ_fake_script() -- PermanentBat.LocalScript
 		
 	end)
 end
-coroutine.wrap(TUDCNQ_fake_script)()
-local function YQHASRD_fake_script() -- vampireinfinitestun.LocalScript 
+coroutine.wrap(VJNAK_fake_script)()
+local function EFLFQK_fake_script() -- vampireinfinitestun.LocalScript 
 	local script = Instance.new('LocalScript', vampireinfinitestun)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -841,8 +917,8 @@ local function YQHASRD_fake_script() -- vampireinfinitestun.LocalScript
 		end
 	end)
 end
-coroutine.wrap(YQHASRD_fake_script)()
-local function GDCZNA_fake_script() -- vampirecrash.LocalScript 
+coroutine.wrap(EFLFQK_fake_script)()
+local function LUOKPB_fake_script() -- vampirecrash.LocalScript 
 	local script = Instance.new('LocalScript', vampirecrash)
 
 	local button = script.Parent
@@ -858,8 +934,8 @@ local function GDCZNA_fake_script() -- vampirecrash.LocalScript
 		debris:AddItem(Sound, 3)
 	end)
 end
-coroutine.wrap(GDCZNA_fake_script)()
-local function LIIL_fake_script() -- YES.LocalScript 
+coroutine.wrap(LUOKPB_fake_script)()
+local function KTDSV_fake_script() -- YES.LocalScript 
 	local script = Instance.new('LocalScript', YES)
 
 	local button = script.Parent
@@ -909,8 +985,8 @@ local function LIIL_fake_script() -- YES.LocalScript
 		end
 	end)
 end
-coroutine.wrap(LIIL_fake_script)()
-local function MSKS_fake_script() -- NOO.LocalScript 
+coroutine.wrap(KTDSV_fake_script)()
+local function JIZQG_fake_script() -- NOO.LocalScript 
 	local script = Instance.new('LocalScript', NOO)
 
 	local button = script.Parent
@@ -919,8 +995,8 @@ local function MSKS_fake_script() -- NOO.LocalScript
 		script.Parent.Parent.Visible = false
 	end)
 end
-coroutine.wrap(MSKS_fake_script)()
-local function IZAZG_fake_script() -- finishercamera.LocalScript 
+coroutine.wrap(JIZQG_fake_script)()
+local function QDEGOU_fake_script() -- finishercamera.LocalScript 
 	local script = Instance.new('LocalScript', finishercamera)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -952,8 +1028,8 @@ local function IZAZG_fake_script() -- finishercamera.LocalScript
 		end
 	end)
 end
-coroutine.wrap(IZAZG_fake_script)()
-local function VBFGWPE_fake_script() -- SpamOrbs.LocalScript 
+coroutine.wrap(QDEGOU_fake_script)()
+local function AVWPQP_fake_script() -- SpamOrbs.LocalScript 
 	local script = Instance.new('LocalScript', SpamOrbs)
 
 	local button = script.Parent
@@ -984,7 +1060,6 @@ local function VBFGWPE_fake_script() -- SpamOrbs.LocalScript
 			_G.SpamOrb = false
 			button.BackgroundColor3 = Color3.fromRGB(170, 0, 0)
 			button.Text = "Spam Crystal Orbs : OFF"
-			print("STOP")
 		end
 	end
 	button.MouseButton1Click:Connect(function()
@@ -1006,8 +1081,8 @@ local function VBFGWPE_fake_script() -- SpamOrbs.LocalScript
 		end
 	end)
 end
-coroutine.wrap(VBFGWPE_fake_script)()
-local function BLPDJY_fake_script() -- SkullCrackernobackpack.LocalScript 
+coroutine.wrap(AVWPQP_fake_script)()
+local function VKCMPYL_fake_script() -- SkullCrackernobackpack.LocalScript 
 	local script = Instance.new('LocalScript', SkullCrackernobackpack)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1039,8 +1114,8 @@ local function BLPDJY_fake_script() -- SkullCrackernobackpack.LocalScript
 		end
 	end)
 end
-coroutine.wrap(BLPDJY_fake_script)()
-local function BEZZZW_fake_script() -- IceDisableBackpack.LocalScript 
+coroutine.wrap(VKCMPYL_fake_script)()
+local function DTEBOKC_fake_script() -- IceDisableBackpack.LocalScript 
 	local script = Instance.new('LocalScript', IceDisableBackpack)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1086,8 +1161,8 @@ local function BEZZZW_fake_script() -- IceDisableBackpack.LocalScript
 	end)]]
 		end)
 end
-coroutine.wrap(BEZZZW_fake_script)()
-local function DKLU_fake_script() -- NoRoot.LocalScript 
+coroutine.wrap(DTEBOKC_fake_script)()
+local function IKTI_fake_script() -- NoRoot.LocalScript 
 	local script = Instance.new('LocalScript', NoRoot)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1096,8 +1171,8 @@ local function DKLU_fake_script() -- NoRoot.LocalScript
 		end
 	end)
 end
-coroutine.wrap(DKLU_fake_script)()
-local function ULHSMM_fake_script() -- BreakJointsLeftArm.LocalScript 
+coroutine.wrap(IKTI_fake_script)()
+local function JNIN_fake_script() -- BreakJointsLeftArm.LocalScript 
 	local script = Instance.new('LocalScript', BreakJointsLeftArm)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1113,8 +1188,8 @@ local function ULHSMM_fake_script() -- BreakJointsLeftArm.LocalScript
 		end
 	end)
 end
-coroutine.wrap(ULHSMM_fake_script)()
-local function XUMYI_fake_script() -- BreakerDisableBackpack.LocalScript 
+coroutine.wrap(JNIN_fake_script)()
+local function TIYOYJ_fake_script() -- BreakerDisableBackpack.LocalScript 
 	local script = Instance.new('LocalScript', BreakerDisableBackpack)
 
 	script.Parent.MouseButton1Click:Connect(function()
@@ -1147,8 +1222,44 @@ local function XUMYI_fake_script() -- BreakerDisableBackpack.LocalScript
 		end
 	end)
 end
-coroutine.wrap(XUMYI_fake_script)()
-local function MWMLZ_fake_script() -- TextButton.LocalScript 
+coroutine.wrap(TIYOYJ_fake_script)()
+local function EXIYTNQ_fake_script() -- EquipAll.LocalScript 
+	local script = Instance.new('LocalScript', EquipAll)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if v:IsA("Tool") then
+				v.Parent = game.Players.LocalPlayer.Character
+			end
+		end
+	end)
+end
+coroutine.wrap(EXIYTNQ_fake_script)()
+local function KPYQF_fake_script() -- UseTools.LocalScript 
+	local script = Instance.new('LocalScript', UseTools)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		
+		local speaker = game.Players.LocalPlayer
+		local Backpack = speaker:FindFirstChildOfClass("Backpack")
+		local ammount = tonumber(script.Parent.Parent.AmountsToolTextBox.Text) or 1
+		local delay_ = tonumber(script.Parent.Parent.DelayTool.Text) or false
+		for _, v in ipairs(Backpack:GetChildren()) do
+			v.Parent = speaker.Character
+			coroutine.wrap(function()
+				for _ = 1, ammount do
+					v:Activate()
+					if delay_ then
+						wait(delay_)
+					end
+				end
+				v.Parent = Backpack
+			end)()
+		end
+	end)
+end
+coroutine.wrap(KPYQF_fake_script)()
+local function BQDJJ_fake_script() -- TextButton.LocalScript 
 	local script = Instance.new('LocalScript', TextButton)
 
 	script.Parent.MouseButton1Click:Connect(function()	
@@ -1156,4 +1267,4 @@ local function MWMLZ_fake_script() -- TextButton.LocalScript
 		script.Parent.Parent.Parent.Open.Visible = false
 	end)
 end
-coroutine.wrap(MWMLZ_fake_script)()
+coroutine.wrap(BQDJJ_fake_script)()
