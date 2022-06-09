@@ -38,7 +38,7 @@ for i, v in next, game.Players:GetPlayers() do
 local namelabel = LocalPlayerSection:NewLabel("Name: "..game.Players.LocalPlayer.Name)
 local agelabel = LocalPlayerSection:NewLabel("AccountAge: "..game.Players.LocalPlayer.AccountAge)
 
-LocalPlayerSection:NewButton("Immune to :explode (you cant walk)", "Removes HumanoidRootPart", function()
+LocalPlayerSection:NewButton("Immune to :explode", "Removes HumanoidRootPart", function()
 	notify()
     if game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then
 		game.Players.LocalPlayer.Character.HumanoidRootPart:Destroy()
@@ -482,7 +482,7 @@ TargetSection:NewToggle("LoopBring Player", "LoopBring player to you (Client sid
 	notify()
 	local hum = game.Players.LocalPlayer.Character.HumanoidRootPart
 	pcall(function()
-	while task.wait() do
+	while task.wait(.1) do
 		if not loop then return end
 	if target ~= nil and workspace[target] and workspace[target]:FindFirstChild("Humanoid") and workspace[target].Humanoid.Health > 0 then
 workspace[target].HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(2,1,0)
