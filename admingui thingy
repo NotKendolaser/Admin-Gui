@@ -486,7 +486,7 @@ TargetSection:NewToggle("LoopBring Player", "LoopBring player to you (Client sid
 		if not loop then return end
 	if target ~= nil and workspace[target] and workspace[target]:FindFirstChild("Humanoid") and workspace[target].Humanoid.Health > 0 then
 	workspace[target].Head.Anchored = true
-workspace[target].Head.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(2,1,0)
+workspace[target].Head.CFrame = game.Players.LocalPlayer.Character.Head.CFrame + Vector3.new(2,1,0)
 	end
 end
 end)
