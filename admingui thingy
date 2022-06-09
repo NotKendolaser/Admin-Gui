@@ -172,6 +172,12 @@ LocalPlayerSection:NewButton("Thaw", "Thaw Character", function()
 	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
 end)
 
+LocalPlayerSection:NewButton("Extends your hitbox", "Extends your hitbox by destroying left arm then tp to null zone", function()
+	notify()
+	game.Players.LocalPlayer.Character["Left Arm"]:BreakJoints()
+game.Players.LocalPlayer.Character["HumanoidRootPart"].Position = Vector3.new(999999,999999,999999)
+end)
+
 LocalPlayerSection:NewButton("Infinite Yield", "Loads up infinite yield admin", function()
 	notify()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
