@@ -83,6 +83,16 @@ LocalPlayerSection:NewButton("Infinite Yield", "Loads up infinite yield", functi
 loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
+LocalPlayerSection:NewButton("Freeze", "Freeze your character", function()
+	notify()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+end)
+
+LocalPlayerSection:NewButton("Thaw", "Thaw your character", function()
+	notify()
+game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+end)
+
 LocalPlayerSection:NewButton("Joins & Leaves Notifier", "Tell you who joins server or leave", function()
 	notify()
 local debris = game:GetService("Debris")
@@ -130,6 +140,42 @@ end
 end)
 end)
 
+LocalPlayerSection:NewButton("Rejoin", "Rejoin server", function()
+	notify()
+	local ts = game:GetService("TeleportService")
+
+	local p = game:GetService("Players").LocalPlayer
+	
+	 
+	
+	ts:Teleport(game.PlaceId, p)
+end)
+
+LocalPlayerSection:NewButton("NullZone (Position)", "Go to null zone", function()
+	notify()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.Position = Vector3.new(9999999,9999999,9999999)
+end)
+
+LocalPlayerSection:NewButton("NullZone (CFrame)", "Go to null zone", function()
+	notify()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(9999999,9999999,9999999))
+end)
+
+
+LocalPlayerSection:NewButton("Freeze", "Freeze character", function()
+	notify()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+end)
+
+LocalPlayerSection:NewButton("Thaw", "Thaw Character", function()
+	notify()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+end)
+
+LocalPlayerSection:NewButton("Infinite Yield", "Loads up infinite yield admin", function()
+	notify()
+	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
 --Exploits stuffs
 
 ExploitSection:NewLabel("Bat Knight Bat Sword")
@@ -469,6 +515,38 @@ else
 end
 
 end)
+
+ExploitSection:NewButton("Nan HP", "Gives you nan hp", function()
+	notify()
+	
+	if game.Players.LocalPlayer.Character:FindFirstChild("Diamond Blade Sword") then
+		local args = {
+			[1] = 7,
+			[2] = game.Players.LocalPlayer.Character.Humanoid,
+			[3] = tonumber("-nan")
+		}
+	
+		game:GetService("Players").LocalPlayer.Character:FindFirstChild("Diamond Blade Sword").GearScript.Controller:InvokeServer(unpack(args))
+	elseif game.Players.LocalPlayer.Backpack:FindFirstChild("Diamond Blade Sword") then
+		local args = {
+			[1] = 7,
+			[2] = game.Players.LocalPlayer.Character.Humanoid,
+			[3] = tonumber("-nan")
+		}
+	
+		game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Diamond Blade Sword").GearScript.Controller:InvokeServer(unpack(args))
+	else
+		game.StarterGui:SetCore("SendNotification",  {
+			Title = "Unable to find gear.";
+			Text = "The gear id has been set to your clipboard (173755801)";
+			Icon = "rbxassetid://6035067826";
+			Duration = 5;
+			Button1 = "Okay...";
+		})
+		setclipboard(173755801)
+	end
+	
+	end)
 --Target Section
 
 local targetdropdown = TargetSection:NewDropdown("Target Player", "Choose player you want to target", playerlist, function(player)
@@ -482,15 +560,16 @@ TargetSection:NewToggle("LoopBring Player", "LoopBring player to you (Client sid
 	notify()
 	local hum = game.Players.LocalPlayer.Character.HumanoidRootPart
 	pcall(function()
-	while task.wait(.1) do
+	while task.wait() do
 		if not loop then return end
 	if target ~= nil and workspace[target] and workspace[target]:FindFirstChild("Humanoid") and workspace[target].Humanoid.Health > 0 then
-	workspace[target].Head.Anchored = true
-workspace[target].Head.CFrame = game.Players.LocalPlayer.Character.Head.CFrame + Vector3.new(2,1,0)
+workspace[target].HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + Vector3.new(2,1,0)
 	end
 end
 end)
 end)
+
+TargetSection:NewLabel("Seranok's Rocket Jumper")
 
 TargetSection:NewToggle("Spam Rocket", "Spam Rocket to player", function(lol)
 	getgenv().rocket = lol
@@ -528,6 +607,98 @@ end
 end
 end)
 end)
+
+TargetSection:NewLabel("Diamond Blade Sword")
+
+TargetSection:NewToggle("Kill Player", "Kill player", function(lol)
+	getgenv().crystal = lol
+	notify()
+	if  game.Players.LocalPlayer.Character:FindFirstChild("Diamond Blade Sword") == nil and game.Players.LocalPlayer.Backpack:FindFirstChild("Diamond Blade Sword") == nil then
+		game.StarterGui:SetCore("SendNotification",  {
+			Title = "Unable to find gear.";
+			Text = "The gear id has been set to your clipboard (173755801)";
+			Icon = "rbxassetid://6035067826";
+			Duration = 5;
+			Button1 = "Okay...";
+		})
+		setclipboard(169602103)
+end
+pcall(function()
+	while task.wait(.1) do
+		if not crystal then return end
+	if target ~= nil and workspace[target] and workspace[target]:FindFirstChild("Humanoid") and workspace[target].Humanoid.Health > 0 and game.Players.LocalPlayer.Character:FindFirstChild("Diamond Blade Sword") then
+		local args = {
+			[1] = 7,
+			[2] = workspace[target].Humanoid,
+			[3] = tonumber("inf")
+		}
+		
+		game:GetService("Players").LocalPlayer.Character:FindFirstChild("Diamond Blade Sword").GearScript.Controller:InvokeServer(unpack(args))
+	end
+
+	if target ~= nil and workspace[target] and workspace[target]:FindFirstChild("Humanoid") and workspace[target].Humanoid.Health > 0 and game.Players.LocalPlayer.Backpack:FindFirstChild("Diamond Blade Sword") then
+		local args = {
+			[1] = 7,
+			[2] = workspace[target].Humanoid,
+			[3] = tonumber("inf")
+		}
+		
+		game:GetService("Players").LocalPlayer.Backpack:FindFirstChild("Diamond Blade Sword").GearScript.Controller:InvokeServer(unpack(args))
+end
+end
+end)
+end)
+
+TargetSection:NewLabel("Stop Hitting Yourself")
+
+TargetSection:NewToggle("Loop Hit Player", "Loop using the laser to player", function(lol)
+	getgenv().laser = lol
+	notify()
+	if  game.Players.LocalPlayer.Character:FindFirstChild("StopHittingYourself") == nil and game.Players.LocalPlayer.Backpack:FindFirstChild("StopHittingYourself") == nil then
+		game.StarterGui:SetCore("SendNotification",  {
+			Title = "Unable to find gear.";
+			Text = "The gear id has been set to your clipboard (173755801)";
+			Icon = "rbxassetid://6035067826";
+			Duration = 5;
+			Button1 = "Okay...";
+		})
+		setclipboard(169602103)
+end
+pcall(function()
+	while task.wait(.1) do
+		if not laser then return end
+	if target ~= nil and workspace[target] and workspace[target]:FindFirstChild("Humanoid") and workspace[target].Humanoid.Health > 0 and game.Players.LocalPlayer.Character:FindFirstChild("StopHittingYourself") then
+		local args = {
+			[1] = workspace[target].Head
+		}
+		
+		game:GetService("Players").LocalPlayer.Character.StopHittingYourself.MouseClick:FireServer(unpack(args))
+		
+	end
+
+	if target ~= nil and workspace[target] and workspace[target]:FindFirstChild("Humanoid") and workspace[target].Humanoid.Health > 0 and game.Players.LocalPlayer.Backpack:FindFirstChild("StopHittingYourself") then
+		game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("StopHittingYourself"))
+		local args = {
+			[1] = workspace[target].Head
+		}
+		
+		game:GetService("Players").LocalPlayer.Character.StopHittingYourself.MouseClick:FireServer(unpack(args))
+end
+end
+end)
+end)
+
+TargetSection:NewTextBox("Spam Command", "Spam command here", function(txt)
+	notify()
+	while task.wait(3) do
+	local args = {
+		[1] = txt
+	}
+	
+	game:GetService("ReplicatedStorage").HDAdminClient.Signals.RequestCommand:InvokeServer(unpack(args))
+end
+end)
+
 
 -- Refresh PlayerList
 game.Players.PlayerAdded:Connect(function(player)
