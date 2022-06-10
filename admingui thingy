@@ -153,7 +153,7 @@ end)
 
 LocalPlayerSection:NewButton("NullZone (Position)", "Go to null zone", function()
 	notify()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.Position = Vector3.new(9999999,9999999,9999999)
+	game.Players.LocalPlayer.Character.HumanoidRootPart.Position = Vector3.new(217312849,239512849,239512849)
 end)
 
 LocalPlayerSection:NewButton("NullZone (CFrame)", "Go to null zone", function()
