@@ -182,6 +182,96 @@ LocalPlayerSection:NewButton("Infinite Yield", "Loads up infinite yield admin", 
 	notify()
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
+
+LocalPlayerSection:NewLabel("Seranok's Rocket Jumper")
+LocalPlayerSection:NewToggle("Rocket no cooldown", "Gives no cooldown to rocket", function(lol)
+    notify()
+	getgenv().rocketnocd = lol
+local plr = game:GetService("Players")
+local lplr = plr.LocalPlayer
+local mouse = lplr:GetMouse()
+local random = math.random
+local UserInputService = game:GetService("UserInputService")
+local shooting = true
+
+pcall(function()
+    if  game.Players.LocalPlayer.Character:FindFirstChild("RocketJumper") == nil and game.Players.LocalPlayer.Backpack:FindFirstChild("RocketJumper") == nil then
+		game.StarterGui:SetCore("SendNotification",  {
+			Title = "Unable to find gear.";
+			Text = "The gear id has been set to your clipboard (169602103)";
+			Icon = "rbxassetid://6035067826";
+			Duration = 5;
+			Button1 = "Okay...";
+		})
+		setclipboard(169602103)
+end
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if not rocketnocd then return end
+    if input.UserInputType == Enum.UserInputType.MouseButton1 and lplr.Character:FindFirstChild("RocketJumper") and rocketnocd then
+shooting = true
+while shooting do
+    wait(0.1)
+local ohVector31 = mouse.Hit.p--lplr.Character.HumanoidRootPart.Position
+local ohVector32 = mouse.Hit.p
+lplr.Character.RocketJumper.FireRocket:FireServer(ohVector31, ohVector32)
+end
+end
+end)
+
+UserInputService.InputEnded:Connect(function(input, gameProcessed)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+shooting = false
+end
+end)
+end)
+end)
+
+LocalPlayerSection:NewLabel("KOSS Wind Summoner")
+LocalPlayerSection:NewToggle("Wind summoner no cooldown", "Gives no cooldown to wind summoner", function(lol)
+    notify()
+	getgenv().windsummon = lol
+local plr = game:GetService("Players")
+local lplr = plr.LocalPlayer
+local mouse = lplr:GetMouse()
+local random = math.random
+local UserInputService = game:GetService("UserInputService")
+local shooting = true
+
+pcall(function()
+    if  game.Players.LocalPlayer.Character:FindFirstChild("KOSSGustHorn") == nil and game.Players.LocalPlayer.Backpack:FindFirstChild("KOSSGustHorn") == nil then
+		game.StarterGui:SetCore("SendNotification",  {
+			Title = "Unable to find gear.";
+			Text = "The gear id has been set to your clipboard (127506257)";
+			Icon = "rbxassetid://6035067826";
+			Duration = 5;
+			Button1 = "Okay...";
+		})
+		setclipboard(127506257)
+end
+UserInputService.InputBegan:Connect(function(input, gameProcessed)
+    if not windsummon then return end
+    if input.UserInputType == Enum.UserInputType.MouseButton1 and lplr.Character:FindFirstChild("KOSSGustHorn") and windsummon then
+shooting = true
+while shooting do
+    wait(0.1)
+    local args = {
+        [1] = "DO THE THING!!!"
+    }
+    
+    game:GetService("Players").LocalPlayer.Character.KOSSGustHorn.RemoteEvent:FireServer(unpack(args))
+    
+end
+end
+end)
+
+UserInputService.InputEnded:Connect(function(input, gameProcessed)
+    if input.UserInputType == Enum.UserInputType.MouseButton1 then
+shooting = false
+end
+end)
+end)
+end)
+
 --Exploits stuffs
 
 ExploitSection:NewLabel("Bat Knight Bat Sword")
@@ -553,6 +643,63 @@ ExploitSection:NewButton("Nan HP", "Gives you nan hp", function()
 	end
 	
 	end)
+
+    ExploitSection:NewLabel("Gear Blacklister")
+
+    ExploitSection:NewButton("Activate", "Activate gear blacklister", function()
+        notify()
+        local Gears = {
+            "Frozen Scroll Of Sevenless",
+            "TriLaserGun",
+            "ScytheOfSingularity",
+            "RainbowTriLaserGun",
+            "Thunderbolt",
+            "LightningHorn",
+            "FuchsiaPeriastron",
+            "KOSSGustHorn",
+            "BlizzardWand",
+            "StopHittingYourself",
+            "SledgeHammer",
+            "StaffOfAzureEverIce",
+            "StaffOfCrimsonChaosFire",
+            "Technological staff",
+            "FreezeRay",
+            "ScrollOfSevenless"
+        }
+        game:GetService("RunService").Heartbeat:Connect(function()
+            pcall(function()
+                for i,v in pairs(game.Players:GetPlayers()) do
+                    if v ~= game.Players.LocalPlayer then
+                        _G.gearfound = false
+                        for e, gear in pairs(v.Character:GetChildren()) do
+                            if gear:IsA("Tool") then
+                                for _, g in pairs(Gears) do
+                                    if g == gear.Name then
+                                        _G.gearfound = true
+                                    end
+                                end
+                            end
+                        end
+                        if _G.gearfound == true and v.Character.Humanoid.Health ~= 0 then
+                            local args = {
+                                [1] = v.Character.HumanoidRootPart.Position - Vector3.new(0,1,0),
+                                [2] = v.Character.HumanoidRootPart.Position
+                            }
+        
+                            game:GetService("Players").LocalPlayer.Backpack.RocketJumper.FireRocket:FireServer(unpack(args))
+                            local ohNumber1 = 7
+                            local ohInstance2 = v.Character.Humanoid
+                            local ohNumber3 = 9999999
+        
+                            game.Players.LocalPlayer.Backpack["Diamond Blade Sword"].GearScript.Controller:InvokeServer(ohNumber1, ohInstance2, ohNumber3)
+                        end
+                    end
+                end
+            end)
+        end)
+    end)
+
+
 --Target Section
 
 local targetdropdown = TargetSection:NewDropdown("Target Player", "Choose player you want to target", playerlist, function(player)
@@ -596,7 +743,7 @@ pcall(function()
 		if not rocket then return end
 	if target ~= nil and workspace[target] and workspace[target]:FindFirstChild("Humanoid") and workspace[target].Humanoid.Health > 0 and game.Players.LocalPlayer.Character:FindFirstChild("RocketJumper") then
 		local args = {
-			[1] = workspace[target].Torso.Position - Vector3.new(0,1,0),
+			[1] = workspace[target].Torso.Position - Vector3.new(0,-1,0),
 			[2] = workspace[target].Torso.Position
 		}
 
@@ -604,7 +751,7 @@ pcall(function()
 	end
 	if target ~= nil and workspace[target] and workspace[target]:FindFirstChild("Humanoid") and workspace[target].Humanoid.Health > 0 and game.Players.LocalPlayer.Backpack:FindFirstChild("RocketJumper") then
 		local args = {
-			[1] = workspace[target].Torso.Position + Vector3.new(0,1,0),
+			[1] = workspace[target].Torso.Position + Vector3.new(0,-1,0),
 			[2] = workspace[target].Torso.Position
 		}
 
