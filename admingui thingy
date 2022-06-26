@@ -211,7 +211,7 @@ UserInputService.InputBegan:Connect(function(input, gameProcessed)
 shooting = true
 while shooting do
     wait(0.1)
-local ohVector31 = mouse.Hit.p--lplr.Character.HumanoidRootPart.Position
+local ohVector31 = lplr.Character.HumanoidRootPart.Position
 local ohVector32 = mouse.Hit.p
 lplr.Character.RocketJumper.FireRocket:FireServer(ohVector31, ohVector32)
 end
