@@ -184,9 +184,9 @@ LocalPlayerSection:NewButton("Infinite Yield", "Loads up infinite yield admin", 
 end)
 
 LocalPlayerSection:NewLabel("Seranok's Rocket Jumper")
-LocalPlayerSection:NewToggle("Rocket no cooldown", "Gives no cooldown to rocket", function(lol)
+LocalPlayerSection:NewToggle("Rocket no cooldown", "Gives no cooldown to rocket", function(hehehe)
     notify()
-	getgenv().rocketnocd = lol
+	getgenv().rocketnocd = hehehe
 local plr = game:GetService("Players")
 local lplr = plr.LocalPlayer
 local mouse = lplr:GetMouse()
@@ -208,10 +208,10 @@ end
 UserInputService.InputBegan:Connect(function(input, gameProcessed)
     if not rocketnocd then return end
     if input.UserInputType == Enum.UserInputType.MouseButton1 and lplr.Character:FindFirstChild("RocketJumper") and rocketnocd then
-shooting = true
-while shooting do
+ddedede = true
+while ddedede do
     wait(0.1)
-local ohVector31 = lplr.Character.HumanoidRootPart.Position
+local ohVector31 = mouse.Hit.p--lplr.Character.HumanoidRootPart.Position
 local ohVector32 = mouse.Hit.p
 lplr.Character.RocketJumper.FireRocket:FireServer(ohVector31, ohVector32)
 end
@@ -220,7 +220,7 @@ end)
 
 UserInputService.InputEnded:Connect(function(input, gameProcessed)
     if input.UserInputType == Enum.UserInputType.MouseButton1 then
-shooting = false
+ddedede = false
 end
 end)
 end)
@@ -841,6 +841,7 @@ end
 end)
 end)
 
+TargetSection:NewLabel("Spam command (rejoin to disable also this wont get you banned for spamming)")
 TargetSection:NewTextBox("Spam Command", "Spam command here", function(txt)
 	notify()
 	while task.wait(3) do
