@@ -1,6 +1,6 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 
-local Window = Library.CreateLib("OP Gears Gui", "GrapeTheme")
+local Window = Library.CreateLib("OP Gears Gui", "DarkTheme")
 
 local LocalPlayerTab = Window:NewTab("LocalPlayer")
 
@@ -202,6 +202,13 @@ LocalPlayerSection:NewButton("Infinite Yield", "Loads up infinite yield admin", 
 	loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
 end)
 
+LocalPlayerSection:NewButton("Anti Afk", "Prevents you getting kicked", function()
+	notify()
+	for i,v in next, getconnections(game.Players.LocalPlayer.Idled) do
+		v:Disable()
+		end
+end)
+
 LocalPlayerSection:NewLabel("Seranok's Rocket Jumper")
 LocalPlayerSection:NewToggle("Rocket no cooldown", "Gives no cooldown to rocket", function(hehehe)
     notify()
@@ -337,12 +344,6 @@ LocalPlayerSection:NewButton("Break Skeleton", "Kill someone with this sword and
 end
 end)
 
-LocalPlayerSection:NewButton("Anti Afk", "Prevents you getting kicked", function()
-	notify()
-	for i,v in next, getconnections(game.Players.LocalPlayer.Idled) do
-		v:Disable()
-		end
-end)
 
 --Exploits stuffs
 
@@ -771,6 +772,30 @@ ExploitSection:NewButton("Nan HP", "Gives you nan hp", function()
         end)
     end)
 
+
+ExploitSection:NewLabel("Flaming Dragon Slayer Bo Staff")
+
+ExploitSection:NewButton("Crash Server", "Warning: This will crash server", function()
+	notify()
+	if game.Players.LocalPlayer.Backpack:FindFirstChild("DragonBoStaff") == nil and game.Players.LocalPlayer.Character:FindFirstChild("DragonBoStaff") == nil then
+		game.StarterGui:SetCore("SendNotification",  {
+			Title = "Unable to find gear.";
+			Text = "The gear id has been set to your clipboard (87361662)";
+			Icon = "rbxassetid://6035067826";
+			Duration = 5;
+			Button1 = "Okay...";
+		})
+		setclipboard(87361662)
+	end
+	if game.Players.LocalPlayer.Character:FindFirstChild("DragonBoStaff") then
+		game.Players.LocalPlayer.Character.DragonBoStaff.Handle:Destroy()
+	end
+	if game.Players.LocalPlayer.Backpack:FindFirstChild("DragonBoStaff") then
+		game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack:FindFirstChild("DragonBoStaff"))
+		repeat wait(0.1) until game.Players.LocalPlayer.Character.DragonBoStaff.Handle:FindFirstChild("Motor6D")
+		game.Players.LocalPlayer.Character.DragonBoStaff.Handle:Destroy()
+	end
+end)
 
 --Target Section
 
