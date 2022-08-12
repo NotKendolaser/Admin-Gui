@@ -171,8 +171,8 @@ LocalPlayerSection:NewToggle("Invis all tools", "Invis all of your tools", funct
 		for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
 			if v:IsA("Tool") then
 				for i,_ in pairs(v:GetDescendants()) do
-					if _:IsA("BasePart") then
-						_.Transparency = 1
+					if _:IsA("SpecialMesh") then
+						_:Destroy()
 					end
 				end
 			end
