@@ -165,17 +165,17 @@ end)
 LocalPlayerSection:NewToggle("Invis all tools", "Invis all of your tools", function(state)
 	notify()
 	getgenv().invistools = state
+	for i, a in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
+		if a:IsA("BasePart") then
+			a.Transparency = 1
+		end
+end
 	pcall(function()
         while task.wait(.1) do
             	if not invistools then return end
-				for i, a in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
-					if a:IsA("BasePart") then
-						a.Transparency = 1
-					end
-			end
 				for i, v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
 					if v:IsA("Tool") then
-						for _, v in pairs(v:GetDescendants()) do
+						for i, _ in pairs(v:GetDescendants()) do
 							if _:IsA("BasePart") then
 						   _.Transparency = 1     
 							end
