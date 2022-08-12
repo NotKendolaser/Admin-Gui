@@ -168,13 +168,6 @@ LocalPlayerSection:NewToggle("Invis all tools", "Invis all of your tools", funct
 	pcall(function()
 		while task.wait(.1) do
 			if not invistools then return end
-		game.Players.LocalPlayer.Backpack.ChildAdded:Connect(function()
-		for i, v in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
-		if v:IsA("BasePart") then
-		v.Transparency = 1
-		end
-		end
-		end)
 		for i,v in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
 			if v:IsA("Tool") then
 				for i,_ in pairs(v:GetDescendants()) do
